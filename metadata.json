@@ -1,0 +1,6 @@
+{
+  "name": "TEAM PROJECT",
+  "description": "Blockchain-Enabled E-Governance Document Verification Platform with SHA-256 integrity, digital signatures, and privacy-preserving zero-knowledge verification.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

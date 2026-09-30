@@ -1,0 +1,1594 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TEAM PROJECT — Blockchain-Enabled E-Governance Document Verification</title>
+    <meta name="description" content="Secure government documents with tamper-proof verification, role-based access control, digital signatures, and blockchain-backed integrity." />
+    <meta property="og:title" content="TEAM PROJECT — Blockchain-Enabled E-Governance Platform" />
+    <meta property="og:description" content="Secure government documents with tamper-proof verification, role-based access control, digital signatures, and blockchain-backed integrity." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Pure CSS3 Stylesheets (Zero Frameworks) -->
+    <link rel="stylesheet" href="/css/animations.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/dashboard.css" />
+  </head>
+  <body>
+    <!-- Ambient 3D Motion Design Canvas (Interactive Mouse Moving Physics) -->
+    <canvas id="particleCanvas"></canvas>
+
+    <!-- Top Minimal Sticky Header (Navigation Headings Moved to Bottom iPhone Dock) -->
+    <header class="site-header" id="siteHeader">
+      <div class="container header-inner" style="justify-content: space-between;">
+        <!-- Zone 1: Logo / Project Icon -->
+        <a href="#home" class="brand-link" aria-label="TEAM PROJECT Homepage">
+          <div class="brand-crest">
+            <svg viewBox="0 0 24 24" width="20" height="20">
+              <path d="M12 2L3 7v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-9-5zm0 4a3 3 0 110 6 3 3 0 010-6zm4 11.2c-1.12.56-2.5.8-4 .8s-2.88-.24-4-.8V15.5c0-1.33 2.67-2 4-2s4 .67 4 2v1.7z" />
+            </svg>
+          </div>
+          <span class="brand-text">TEAM PROJECT</span>
+        </a>
+
+        <!-- Center: Live Blockchain Status Pill -->
+        <div class="header-status-badge">
+          <span class="live-dot"></span>
+          <span>LEDGER SYNCED · BLOCK #10,484 · SHA-256 ACTIVE</span>
+        </div>
+
+        <!-- Zone 3: Actions -->
+        <div class="header-actions">
+          <button class="role-pill-btn trigger-role-modal" aria-label="Active Security Persona">
+            <span class="role-dot current-role-dot officer"></span>
+            <span class="current-role-label">Government Officer</span>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- ====================================================================
+           1. HERO SECTION
+           ==================================================================== -->
+      <section class="hero-section" id="home">
+        <div class="container hero-grid">
+          <!-- Left Hero Content -->
+          <div class="hero-content">
+            <div class="hero-kicker-wrapper">
+              <span class="hero-kicker-dot"></span>
+              <span class="hero-kicker-text">BLOCKCHAIN-SECURED E-GOVERNANCE</span>
+            </div>
+
+            <h1 class="hero-headline">
+              Secure Documents.<br />
+              <span class="gradient-accent">Verified Trust.</span><br />
+              Powered by Blockchain.
+            </h1>
+
+            <p class="hero-lead">
+              Secure government documents with tamper-proof verification, role-based access control, digital signatures, and blockchain-backed integrity.
+            </p>
+
+            <div class="hero-cta-group">
+              <a href="#verification" class="btn-primary">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                Verify a Document
+              </a>
+              <a href="#how-it-works" class="btn-secondary">
+                Explore the System
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
+            </div>
+
+            <div class="hero-specs-row">
+              <div class="spec-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                <span>NIST SHA-256 Standards</span>
+              </div>
+              <div class="spec-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                <span>Zero-Knowledge Privacy Layer</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Hero Visual: Conceptual Secure Document Connected to Blockchain Nodes -->
+          <div class="hero-visual-card">
+            <div class="pipeline-header">
+              <div class="pipeline-title">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+                Autonomous Verification Network
+              </div>
+              <span class="pipeline-badge">LIVE LEDGER</span>
+            </div>
+
+            <!-- Conceptual Document Visual With Verification Nodes -->
+            <div style="background: #F8FAFC; border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 20px; position: relative; box-shadow: var(--shadow-card);">
+              <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--border-subtle); padding-bottom: 12px; margin-bottom: 14px;">
+                <div style="display: flex; align-items: center; gap: 10px;">
+                  <div style="width: 28px; height: 28px; border-radius: 6px; background: rgba(2, 132, 199, 0.12); display: flex; align-items: center; justify-content: center; color: var(--accent-blue);">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/></svg>
+                  </div>
+                  <div>
+                    <div style="font-size: 0.85rem; font-weight: 700; color: var(--text-primary);">Land_Deed_Certificate_2026.pdf</div>
+                    <div style="font-size: 0.72rem; color: var(--text-muted);">Municipal Revenue Registry · 2.4 MB</div>
+                  </div>
+                </div>
+                <span class="block-status-pill">AUTHENTICATED</span>
+              </div>
+
+              <!-- Cryptographic Hash Stream -->
+              <div style="background: #FFFFFF; border: 1px solid var(--border-subtle); border-radius: 6px; padding: 10px; font-family: var(--font-mono); font-size: 0.72rem; margin-bottom: 16px;">
+                <span style="color: var(--accent-blue); display: block; font-size: 0.68rem; margin-bottom: 2px;">SHA-256 HASH FINGERPRINT:</span>
+                <span style="color: var(--text-secondary); word-break: break-all;">9e4c1b50428ad8198fb9ec2b10dfd32213e481c15f9b48b6c434220b22bc4501</span>
+              </div>
+
+              <!-- Connected Blockchain Verification Nodes -->
+              <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;">
+                <div style="background: #FFFFFF; border: 1px solid var(--border-subtle); border-radius: 8px; padding: 10px; text-align: center; box-shadow: 0 1px 3px rgba(15,23,42,0.04);">
+                  <div style="font-size: 0.7rem; color: var(--accent-blue); font-weight: 700;">NODE ALPHA</div>
+                  <div style="font-size: 0.75rem; font-weight: 600; color: var(--text-primary);">Block #1024</div>
+                  <div style="font-size: 0.68rem; color: var(--color-success); margin-top: 2px;">● Synced</div>
+                </div>
+
+                <div style="background: #FFFFFF; border: 1px solid var(--border-accent); border-radius: 8px; padding: 10px; text-align: center; box-shadow: 0 0 12px rgba(2, 132, 199, 0.15);">
+                  <div style="font-size: 0.7rem; color: var(--accent-purple); font-weight: 700;">SIGNATURE</div>
+                  <div style="font-size: 0.75rem; font-weight: 600; color: var(--text-primary);">ECDSA secp256k1</div>
+                  <div style="font-size: 0.68rem; color: var(--color-success); margin-top: 2px;">● Validated</div>
+                </div>
+
+                <div style="background: #FFFFFF; border: 1px solid var(--border-subtle); border-radius: 8px; padding: 10px; text-align: center; box-shadow: 0 1px 3px rgba(15,23,42,0.04);">
+                  <div style="font-size: 0.7rem; color: var(--accent-blue); font-weight: 700;">PRIVACY</div>
+                  <div style="font-size: 0.75rem; font-weight: 600; color: var(--text-primary);">zk-SNARK</div>
+                  <div style="font-size: 0.68rem; color: var(--color-success); margin-top: 2px;">● Zero-Leak</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           2. TRUST / SECURITY STRIP
+           ==================================================================== -->
+      <section class="trust-strip-section" aria-label="Cryptographic Trust Architecture">
+        <div class="container">
+          <div class="trust-strip-grid">
+            <!-- 1. SHA-256 Hashing -->
+            <div class="trust-strip-item">
+              <div class="trust-strip-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="9" x2="20" y2="9"/><line x1="4" y1="15" x2="20" y2="15"/><line x1="10" y1="3" x2="8" y2="21"/><line x1="16" y1="3" x2="14" y2="21"/></svg>
+              </div>
+              <div class="trust-strip-title">SHA-256 Hashing</div>
+            </div>
+
+            <!-- 2. Digital Signatures -->
+            <div class="trust-strip-item">
+              <div class="trust-strip-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/></svg>
+              </div>
+              <div class="trust-strip-title">Digital Signatures</div>
+            </div>
+
+            <!-- 3. Blockchain Verification -->
+            <div class="trust-strip-item">
+              <div class="trust-strip-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
+              </div>
+              <div class="trust-strip-title">Blockchain Verification</div>
+            </div>
+
+            <!-- 4. Role-Based Access -->
+            <div class="trust-strip-item">
+              <div class="trust-strip-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </div>
+              <div class="trust-strip-title">Role-Based Access</div>
+            </div>
+
+            <!-- 5. Secure Off-Chain Storage -->
+            <div class="trust-strip-item">
+              <div class="trust-strip-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+              </div>
+              <div class="trust-strip-title">Secure Off-Chain Storage</div>
+            </div>
+
+            <!-- 6. Audit Trail -->
+            <div class="trust-strip-item">
+              <div class="trust-strip-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </div>
+              <div class="trust-strip-title">Audit Trail</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           3. ABOUT THE SYSTEM
+           ==================================================================== -->
+      <section class="section-wrapper" id="about">
+        <div class="container">
+          <div class="about-system-grid">
+            <!-- Left Column: Purpose & Explanation -->
+            <div>
+              <span class="section-kicker">PURPOSE & MISSION</span>
+              <h2 class="h2-title" style="margin-top: 10px; margin-bottom: 18px;">
+                Securing Governance Infrastructure in the Digital Era
+              </h2>
+              <p class="body-text" style="margin-bottom: 16px;">
+                Traditional paper-based records and centralized digital databases remain vulnerable to unauthorized tampering, forgery, administrative fraud, and verification delays. 
+              </p>
+              <p class="body-text">
+                <strong>VERIDEX</strong> bridges municipal authorities and citizens by anchoring official certificates to an immutable public blockchain. Documents are verified in milliseconds using cryptographic hash matching and zero-knowledge privacy proofs without ever exposing sensitive citizen data.
+              </p>
+
+              <!-- 5 Core Concepts Highlighted -->
+              <div class="concepts-badges-row">
+                <div class="concept-badge">
+                  <span class="concept-dot"></span>
+                  <span>Integrity</span>
+                </div>
+                <div class="concept-badge">
+                  <span class="concept-dot"></span>
+                  <span>Authenticity</span>
+                </div>
+                <div class="concept-badge">
+                  <span class="concept-dot"></span>
+                  <span>Transparency</span>
+                </div>
+                <div class="concept-badge">
+                  <span class="concept-dot"></span>
+                  <span>Security</span>
+                </div>
+                <div class="concept-badge">
+                  <span class="concept-dot"></span>
+                  <span>Traceability</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Column: Interactive Security Visualization -->
+            <div class="about-vis-card">
+              <div style="font-size: 0.82rem; font-weight: 700; color: var(--accent-blue); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 12px;">
+                Architectural Paradigm Comparison
+              </div>
+              <h3 style="font-size: 1.25rem; font-weight: 700; color: var(--text-primary); margin-bottom: 16px;">
+                Centralized Databases vs. VERIDEX Blockchain
+              </h3>
+
+              <div class="about-comparison-row">
+                <div class="compare-box traditional">
+                  <div class="compare-title" style="color: #EF4444;">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+                    Traditional System
+                  </div>
+                  <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 8px; color: var(--text-secondary);">
+                    <li>• Physical stamp easily forged</li>
+                    <li>• Single point of server failure</li>
+                    <li>• Weeks of manual officer delays</li>
+                    <li>• Plain text leaks citizen privacy</li>
+                  </ul>
+                </div>
+
+                <div class="compare-box veridex">
+                  <div class="compare-title" style="color: var(--accent-blue);">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                    VERIDEX Platform
+                  </div>
+                  <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 8px; color: var(--text-secondary);">
+                    <li>• SHA-256 tamper-proof hash</li>
+                    <li>• Immutable distributed consensus</li>
+                    <li>• Instant client verification (ms)</li>
+                    <li>• Zero-Knowledge privacy shield</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           4. KEY FEATURES (8 CARDS)
+           ==================================================================== -->
+      <section class="section-wrapper" id="features" style="background: var(--bg-secondary);">
+        <div class="container">
+          <div class="section-head" style="text-align: center; max-width: 720px; margin: 0 auto 48px auto;">
+            <span class="section-kicker">ENGINEERING SPECIFICATIONS</span>
+            <h2 class="h2-title" style="margin-top: 10px; margin-bottom: 14px;">Key Platform Features</h2>
+            <p class="body-text">
+              Comprehensive cryptographic safeguards tailored for state ministries, municipal registrars, and global verifiers.
+            </p>
+          </div>
+
+          <div class="features-8-grid">
+            <!-- 1. Role-Based Access Control -->
+            <div class="feature-8-card">
+              <div class="feature-icon-wrapper">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+              </div>
+              <h3 class="feature-8-title">Role-Based Access Control</h3>
+              <p class="feature-8-desc">
+                Strict granular separation of privilege between Citizens, Reviewing Officers, and Independent Verifiers.
+              </p>
+            </div>
+
+            <!-- 2. SHA-256 Document Hashing -->
+            <div class="feature-8-card">
+              <div class="feature-icon-wrapper">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="9" x2="20" y2="9"/><line x1="4" y1="15" x2="20" y2="15"/><line x1="10" y1="3" x2="8" y2="21"/><line x1="16" y1="3" x2="14" y2="21"/></svg>
+              </div>
+              <h3 class="feature-8-title">SHA-256 Document Hashing</h3>
+              <p class="feature-8-desc">
+                Generates a unique 256-bit mathematical fingerprint on the client side via the Web Crypto API before transmission.
+              </p>
+            </div>
+
+            <!-- 3. Digital Signature Verification -->
+            <div class="feature-8-card">
+              <div class="feature-icon-wrapper">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/></svg>
+              </div>
+              <h3 class="feature-8-title">Digital Signature Verification</h3>
+              <p class="feature-8-desc">
+                Authorized government officers digitally sign document digests using ECDSA secp256k1 for legal non-repudiation.
+              </p>
+            </div>
+
+            <!-- 4. Blockchain Registration -->
+            <div class="feature-8-card">
+              <div class="feature-icon-wrapper">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
+              </div>
+              <h3 class="feature-8-title">Blockchain Registration</h3>
+              <p class="feature-8-desc">
+                Hashes and metadata are permanently committed into linked cryptographic blocks with Merkle tree proofs.
+              </p>
+            </div>
+
+            <!-- 5. Secure Off-Chain Storage -->
+            <div class="feature-8-card">
+              <div class="feature-icon-wrapper">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+              </div>
+              <h3 class="feature-8-title">Secure Off-Chain Storage</h3>
+              <p class="feature-8-desc">
+                Document contents are stored in encrypted municipal silos; only zero-knowledge hashes are anchored on-chain.
+              </p>
+            </div>
+
+            <!-- 6. Public Document Verification -->
+            <div class="feature-8-card">
+              <div class="feature-icon-wrapper">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+              </div>
+              <h3 class="feature-8-title">Public Document Verification</h3>
+              <p class="feature-8-desc">
+                Instant portal for employers, universities, and foreign consulates to verify authenticity without account barriers.
+              </p>
+            </div>
+
+            <!-- 7. Immutable Audit Trail -->
+            <div class="feature-8-card">
+              <div class="feature-icon-wrapper">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </div>
+              <h3 class="feature-8-title">Immutable Audit Trail</h3>
+              <p class="feature-8-desc">
+                Append-only chronological log recording every submission, officer review, mint transaction, and verification query.
+              </p>
+            </div>
+
+            <!-- 8. Document Metadata Management -->
+            <div class="feature-8-card">
+              <div class="feature-icon-wrapper">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+              </div>
+              <h3 class="feature-8-title">Document Metadata Management</h3>
+              <p class="feature-8-desc">
+                Classifies jurisdiction, issuing authority, expiry timestamps, and revision histories in standardized formats.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           5. HOW IT WORKS (7 CONNECTED STEPS)
+           ==================================================================== -->
+      <section class="section-wrapper" id="how-it-works">
+        <div class="container">
+          <div class="section-head" style="text-align: center; max-width: 720px; margin: 0 auto 48px auto;">
+            <span class="section-kicker">PROCESS TIMELINE</span>
+            <h2 class="h2-title" style="margin-top: 10px; margin-bottom: 14px;">How It Works</h2>
+            <p class="body-text">
+              Seven seamless cryptographic stages transforming raw municipal certificates into permanently verifiable public records.
+            </p>
+          </div>
+
+          <div class="steps-7-track">
+            <!-- Step 1 -->
+            <div class="step-7-row">
+              <div class="step-7-num">01</div>
+              <div class="step-7-content">
+                <div class="step-7-title">
+                  <span>Citizen Uploads Document</span>
+                  <span style="font-size: 0.75rem; color: var(--accent-blue); font-weight: 600;">SUBMISSION</span>
+                </div>
+                <div class="step-7-desc">
+                  Citizen provides official government document (birth deed, land title, academic credential) via authenticated client portal.
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="step-7-row">
+              <div class="step-7-num">02</div>
+              <div class="step-7-content">
+                <div class="step-7-title">
+                  <span>Government Reviews Document</span>
+                  <span style="font-size: 0.75rem; color: var(--accent-blue); font-weight: 600;">VALIDATION</span>
+                </div>
+                <div class="step-7-desc">
+                  Authorized department officer examines application details, supporting municipal criteria, and applicant credentials.
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="step-7-row">
+              <div class="step-7-num">03</div>
+              <div class="step-7-content">
+                <div class="step-7-title">
+                  <span>Document Gets Hashed</span>
+                  <span style="font-size: 0.75rem; color: var(--accent-blue); font-weight: 600;">CRYPTO DIGEST</span>
+                </div>
+                <div class="step-7-desc">
+                  A deterministic 256-bit SHA-256 fingerprint is generated. Even a single perturbed pixel completely alters this digest.
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="step-7-row">
+              <div class="step-7-num">04</div>
+              <div class="step-7-content">
+                <div class="step-7-title">
+                  <span>Digital Signature Is Applied</span>
+                  <span style="font-size: 0.75rem; color: var(--accent-blue); font-weight: 600;">ECDSA secp256k1</span>
+                </div>
+                <div class="step-7-desc">
+                  The approving government officer cryptographically signs the document hash using their private ministerial hardware key.
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 5 -->
+            <div class="step-7-row">
+              <div class="step-7-num">05</div>
+              <div class="step-7-content">
+                <div class="step-7-title">
+                  <span>Hash & Metadata Registered on Blockchain</span>
+                  <span style="font-size: 0.75rem; color: var(--accent-blue); font-weight: 600;">CONSENSUS MINT</span>
+                </div>
+                <div class="step-7-desc">
+                  The digital signature, hash digest, timestamp, and jurisdiction metadata are permanently sealed in a new blockchain block.
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 6 -->
+            <div class="step-7-row">
+              <div class="step-7-num">06</div>
+              <div class="step-7-content">
+                <div class="step-7-title">
+                  <span>Secure Storage</span>
+                  <span style="font-size: 0.75rem; color: var(--accent-blue); font-weight: 600;">ENCRYPTED VAULT</span>
+                </div>
+                <div class="step-7-desc">
+                  Original file payload is stored securely in encrypted municipal off-chain vaults, preserving citizen data privacy.
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 7 -->
+            <div class="step-7-row">
+              <div class="step-7-num">07</div>
+              <div class="step-7-content">
+                <div class="step-7-title">
+                  <span>Anyone Can Verify Document Authenticity</span>
+                  <span style="font-size: 0.75rem; color: var(--color-success); font-weight: 600;">INSTANT PROOF</span>
+                </div>
+                <div class="step-7-desc">
+                  Any employer, bank, or border agency uploads the document copy to instantly confirm hash matching against the public ledger.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           6. DOCUMENT VERIFICATION SECTION (MAIN INTERACTIVE WORKSPACE)
+           ==================================================================== -->
+      <section class="section-wrapper" id="verification" style="background: var(--bg-secondary);">
+        <div class="container">
+          <div class="section-head" style="text-align: center; max-width: 720px; margin: 0 auto 36px auto;">
+            <span class="section-kicker">VERIFICATION ENGINE</span>
+            <h2 class="h2-title" style="margin-top: 10px; margin-bottom: 14px;">Verify Document Authenticity</h2>
+            <p class="body-text">
+              Real-time SHA-256 Web Crypto hashing, blockchain record matching, and digital signature validation.
+            </p>
+          </div>
+
+          <div id="verifyInterface">
+            <div class="verify-layout-grid">
+              <!-- Left: Upload or Enter Document ID -->
+              <div class="verify-card">
+                <div class="verify-card-header">
+                  <h3 class="verify-card-title">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+                    Document Ingestion
+                  </h3>
+                  <span class="pipeline-badge" style="color: var(--accent-blue);">WEB CRYPTO API</span>
+                </div>
+
+                <!-- Drag & Drop Zone -->
+                <div class="upload-dropzone" id="verifyDropzone">
+                  <input type="file" id="verifyFileInput" class="hidden-file-input" accept=".pdf,.png,.jpg,.jpeg,.json,.doc,.docx" />
+                  <div class="dropzone-icon">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><line x1="9" y1="15" x2="12" y2="12"/><line x1="15" y1="15" x2="12" y2="12"/></svg>
+                  </div>
+                  <div class="dropzone-text">Drag & drop official document copy or browse file</div>
+                  <div class="dropzone-hint">PDF, JPG, PNG, DOCX up to 50MB · Hashed directly inside your browser memory</div>
+                </div>
+
+                <!-- Quick Test Samples -->
+                <div style="margin-top: 18px;">
+                  <span style="font-size: 0.78rem; font-weight: 600; color: var(--text-muted); display: block; margin-bottom: 8px;">
+                    OR TEST WITH PRE-REGISTERED GOVERNMENT DOCKETS:
+                  </span>
+                  <div class="sample-pills-row">
+                    <button class="sample-doc-btn" data-sample="birth">
+                      Birth Certificate
+                    </button>
+                    <button class="sample-doc-btn" data-sample="land">
+                      Land Title Deed
+                    </button>
+                    <button class="sample-doc-btn" data-sample="degree">
+                      University Degree
+                    </button>
+                    <button class="sample-doc-btn tamper-test-pill" data-sample="tampered" style="border-color: rgba(239, 68, 68, 0.4); color: #FCA5A5;">
+                      ⚠ Test Tampered Document
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Selected File Preview -->
+                <div class="file-preview-box" id="filePreviewBox" style="display: none; margin-top: 20px;">
+                  <div class="file-info-header">
+                    <div>
+                      <div class="file-name" id="selectedFileName">document.pdf</div>
+                      <div class="file-size" id="selectedFileSize">0 KB</div>
+                    </div>
+                    <span class="block-status-pill" id="fileStatusBadge">SHA-256 READY</span>
+                  </div>
+
+                  <div style="margin-top: 10px;">
+                    <span style="font-size: 0.72rem; color: var(--accent-blue); font-weight: 700;">COMPUTED SHA-256 HASH:</span>
+                    <div class="block-hash-box" id="selectedFileHash" style="margin-top: 4px; font-size: 0.76rem;">
+                      Generating...
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Verify Action Buttons -->
+                <div style="display: flex; gap: 12px; margin-top: 24px;">
+                  <button class="btn-primary" id="startVerifyBtn" style="flex: 1;" disabled>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                    Verify Document
+                  </button>
+                  <button class="btn-secondary" id="resetVerifyBtn">Reset</button>
+                </div>
+              </div>
+
+              <!-- Right: Verification Pipeline & Result Card -->
+              <div class="verify-card">
+                <div class="verify-card-header">
+                  <h3 class="verify-card-title">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                    Verification Protocol Pipeline
+                  </h3>
+                  <span class="pipeline-badge" id="pipelineStatusBadge">WAITING FOR INPUT</span>
+                </div>
+
+                <!-- Progress Steps -->
+                <div class="pipeline-steps-list">
+                  <div class="pipeline-step-item" id="pStep1">
+                    <div class="pipeline-step-icon">1</div>
+                    <div class="pipeline-step-text">
+                      <div class="pipeline-step-title">DOCUMENT RECEIVED</div>
+                      <div class="pipeline-step-sub">Local file buffer ingested into Web Crypto engine</div>
+                    </div>
+                    <div class="pipeline-step-status">Pending</div>
+                  </div>
+
+                  <div class="pipeline-step-item" id="pStep2">
+                    <div class="pipeline-step-icon">2</div>
+                    <div class="pipeline-step-text">
+                      <div class="pipeline-step-title">GENERATING HASH</div>
+                      <div class="pipeline-step-sub">Deterministic 256-bit SHA-256 fingerprint generated</div>
+                    </div>
+                    <div class="pipeline-step-status">Pending</div>
+                  </div>
+
+                  <div class="pipeline-step-item" id="pStep3">
+                    <div class="pipeline-step-icon">3</div>
+                    <div class="pipeline-step-text">
+                      <div class="pipeline-step-title">SEARCHING BLOCKCHAIN</div>
+                      <div class="pipeline-step-sub">Querying immutable distributed ledger state</div>
+                    </div>
+                    <div class="pipeline-step-status">Pending</div>
+                  </div>
+
+                  <div class="pipeline-step-item" id="pStep4">
+                    <div class="pipeline-step-icon">4</div>
+                    <div class="pipeline-step-text">
+                      <div class="pipeline-step-title">VALIDATING SIGNATURE</div>
+                      <div class="pipeline-step-sub">ECDSA ministerial public key validation</div>
+                    </div>
+                    <div class="pipeline-step-status">Pending</div>
+                  </div>
+
+                  <div class="pipeline-step-item" id="pStep5">
+                    <div class="pipeline-step-icon">5</div>
+                    <div class="pipeline-step-text">
+                      <div class="pipeline-step-title">VERIFYING PRIVACY PROOF</div>
+                      <div class="pipeline-step-sub">Zero-Knowledge Groth16 integrity pairing</div>
+                    </div>
+                    <div class="pipeline-step-status">Pending</div>
+                  </div>
+                </div>
+
+                <!-- Conceptual Result Card (Shown after verification) -->
+                <div class="verification-result-box" id="verificationResultBox" style="display: none; margin-top: 20px;">
+                  <div class="result-header" id="resultHeader">
+                    <div style="font-size: 1.35rem; font-weight: 800; display: flex; align-items: center; gap: 10px;" id="resultTitle">
+                      ✓ DOCUMENT VERIFIED
+                    </div>
+                    <div style="font-size: 0.82rem; color: var(--text-secondary);" id="resultSubtitle">
+                      All cryptographic and blockchain parameters matched.
+                    </div>
+                  </div>
+
+                  <div class="result-checks-list" id="resultChecksList">
+                    <div class="result-check-item">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                      <span>Hash matched blockchain record</span>
+                    </div>
+                    <div class="result-check-item">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                      <span>Digital signature valid (Authorized Government Officer)</span>
+                    </div>
+                    <div class="result-check-item">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                      <span>Privacy proof verified (Zero-leakage confirmed)</span>
+                    </div>
+                    <div class="result-check-item">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                      <span>Record integrity confirmed on immutable ledger</span>
+                    </div>
+                  </div>
+
+                  <div style="margin-top: 18px; display: flex; gap: 10px;">
+                    <button class="btn-primary" id="downloadReceiptBtn" style="flex: 1;">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                      Download Verification Certificate
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           7. BLOCKCHAIN VISUALIZATION (CONNECTED BLOCKS #1024 -> #1027)
+           ==================================================================== -->
+      <section class="section-wrapper" id="blockchain-vis">
+        <div class="container">
+          <div class="section-head" style="text-align: center; max-width: 720px; margin: 0 auto 48px auto;">
+            <span class="section-kicker">DISTRIBUTED LEDGER EXPLORER</span>
+            <h2 class="h2-title" style="margin-top: 10px; margin-bottom: 14px;">Blockchain Visualization</h2>
+            <p class="body-text">
+              Connected immutable blocks guaranteeing tamper-resistance, chronological traceability, and decentralized public consensus.
+            </p>
+          </div>
+
+          <!-- Connected Blocks Row: Block #1024 -> Block #1025 -> Block #1026 -> Block #1027 -->
+          <div class="blockchain-blocks-row" id="blocksVisualizationRow">
+            <!-- Block #1024 -->
+            <div class="block-interactive-card" data-block="1024">
+              <div class="block-header-badge">
+                <span class="block-id-tag">Block #1024</span>
+                <span class="block-status-pill">ANCHORED</span>
+              </div>
+              <div style="font-size: 0.78rem; color: var(--text-muted);">Timestamp: 29 Sep 2026 14:22:10</div>
+
+              <div>
+                <span class="block-hash-label">DOCUMENT HASH:</span>
+                <div class="block-hash-box">
+                  9e4c1b50428ad8198fb9ec2b10dfd32213e481c15f9b48b6c434220b22bc4501
+                </div>
+              </div>
+
+              <div>
+                <span class="block-hash-label">PREVIOUS HASH:</span>
+                <div class="block-hash-box">
+                  00008fa4b31c902d1844b201cd9912aa440b821434cd0192e4ba8901842bc110
+                </div>
+              </div>
+
+              <div style="display: flex; align-items: center; justify-content: space-between; font-size: 0.75rem; color: var(--accent-blue); padding-top: 4px;">
+                <span>Vital Deed Registry</span>
+                <span>Click to Inspect &rarr;</span>
+              </div>
+            </div>
+
+            <!-- Block #1025 -->
+            <div class="block-interactive-card" data-block="1025">
+              <div class="block-header-badge">
+                <span class="block-id-tag">Block #1025</span>
+                <span class="block-status-pill">ANCHORED</span>
+              </div>
+              <div style="font-size: 0.78rem; color: var(--text-muted);">Timestamp: 29 Sep 2026 16:04:45</div>
+
+              <div>
+                <span class="block-hash-label">DOCUMENT HASH:</span>
+                <div class="block-hash-box">
+                  5f2d3a9b1c8e7f6d4a5b0c9e8f7a6b5c4d3e2f1a0b9c8d7e6f5a4b3c2d1e0f9a
+                </div>
+              </div>
+
+              <div>
+                <span class="block-hash-label">PREVIOUS HASH:</span>
+                <div class="block-hash-box">
+                  9e4c1b50428ad8198fb9ec2b10dfd32213e481c15f9b48b6c434220b22bc4501
+                </div>
+              </div>
+
+              <div style="display: flex; align-items: center; justify-content: space-between; font-size: 0.75rem; color: var(--accent-blue); padding-top: 4px;">
+                <span>Municipal Land Title</span>
+                <span>Click to Inspect &rarr;</span>
+              </div>
+            </div>
+
+            <!-- Block #1026 -->
+            <div class="block-interactive-card" data-block="1026">
+              <div class="block-header-badge">
+                <span class="block-id-tag">Block #1026</span>
+                <span class="block-status-pill">ANCHORED</span>
+              </div>
+              <div style="font-size: 0.78rem; color: var(--text-muted);">Timestamp: 29 Sep 2026 18:31:02</div>
+
+              <div>
+                <span class="block-hash-label">DOCUMENT HASH:</span>
+                <div class="block-hash-box">
+                  1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b
+                </div>
+              </div>
+
+              <div>
+                <span class="block-hash-label">PREVIOUS HASH:</span>
+                <div class="block-hash-box">
+                  5f2d3a9b1c8e7f6d4a5b0c9e8f7a6b5c4d3e2f1a0b9c8d7e6f5a4b3c2d1e0f9a
+                </div>
+              </div>
+
+              <div style="display: flex; align-items: center; justify-content: space-between; font-size: 0.75rem; color: var(--accent-blue); padding-top: 4px;">
+                <span>Academic Degree</span>
+                <span>Click to Inspect &rarr;</span>
+              </div>
+            </div>
+
+            <!-- Block #1027 -->
+            <div class="block-interactive-card active" data-block="1027">
+              <div class="block-header-badge">
+                <span class="block-id-tag">Block #1027</span>
+                <span class="block-status-pill">LATEST MINT</span>
+              </div>
+              <div style="font-size: 0.78rem; color: var(--text-muted);">Timestamp: 30 Sep 2026 00:15:39</div>
+
+              <div>
+                <span class="block-hash-label">DOCUMENT HASH:</span>
+                <div class="block-hash-box">
+                  a8f94b2c9de14b7289d021c4fa92038162e0842bbd1938501248dca47180bc41
+                </div>
+              </div>
+
+              <div>
+                <span class="block-hash-label">PREVIOUS HASH:</span>
+                <div class="block-hash-box">
+                  1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b
+                </div>
+              </div>
+
+              <div style="display: flex; align-items: center; justify-content: space-between; font-size: 0.75rem; color: var(--accent-blue); padding-top: 4px;">
+                <span>Revenue Assessment</span>
+                <span>Click to Inspect &rarr;</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           8. SECURITY ARCHITECTURE (LAYER-BY-LAYER FLOW)
+           ==================================================================== -->
+      <section class="section-wrapper" id="security" style="background: var(--bg-secondary);">
+        <div class="container">
+          <div class="section-head" style="text-align: center; max-width: 720px; margin: 0 auto 36px auto;">
+            <span class="section-kicker">SECURITY ARCHITECTURE</span>
+            <h2 class="h2-title" style="margin-top: 10px; margin-bottom: 14px;">End-to-End Cryptographic Defense</h2>
+            <p class="body-text">
+              Trace the complete path from citizen client authentication to immutable blockchain anchoring and zero-knowledge verification.
+            </p>
+          </div>
+
+          <div class="sec-arch-flow-grid">
+            <!-- 1. User -->
+            <div class="sec-flow-node">
+              <div class="sec-flow-step-num">Step 01</div>
+              <div class="sec-flow-title">1. User</div>
+              <div class="sec-flow-desc">Citizens and government officials interact via encrypted TLS 1.3 sessions with zero plaintext leaks.</div>
+            </div>
+
+            <!-- 2. Authentication -->
+            <div class="sec-flow-node">
+              <div class="sec-flow-step-num">Step 02</div>
+              <div class="sec-flow-title">2. Authentication</div>
+              <div class="sec-flow-desc">Hardware security tokens, biometric identity proofs, and multi-factor ministerial logins.</div>
+            </div>
+
+            <!-- 3. RBAC -->
+            <div class="sec-flow-node">
+              <div class="sec-flow-step-num">Step 03</div>
+              <div class="sec-flow-title">3. RBAC</div>
+              <div class="sec-flow-desc">Role-based access controls dictate upload, inspection, digital signing, and administrative boundaries.</div>
+            </div>
+
+            <!-- 4. Document Encryption / Secure Storage -->
+            <div class="sec-flow-node">
+              <div class="sec-flow-step-num">Step 04</div>
+              <div class="sec-flow-title">4. Document Encryption</div>
+              <div class="sec-flow-desc">Off-chain municipal storage with AES-256-GCM envelope encryption safeguarding citizen privacy.</div>
+            </div>
+
+            <!-- 5. SHA-256 Hash -->
+            <div class="sec-flow-node">
+              <div class="sec-flow-step-num">Step 05</div>
+              <div class="sec-flow-title">5. SHA-256 Hash</div>
+              <div class="sec-flow-desc">Deterministic 256-bit cryptographic digest uniquely fingerprinting the electronic document payload.</div>
+            </div>
+
+            <!-- 6. Digital Signature -->
+            <div class="sec-flow-node">
+              <div class="sec-flow-step-num">Step 06</div>
+              <div class="sec-flow-title">6. Digital Signature</div>
+              <div class="sec-flow-desc">ECDSA secp256k1 signature created with authorized officer private key for legal non-repudiation.</div>
+            </div>
+
+            <!-- 7. Blockchain -->
+            <div class="sec-flow-node">
+              <div class="sec-flow-step-num">Step 07</div>
+              <div class="sec-flow-title">7. Blockchain</div>
+              <div class="sec-flow-desc">Immutable distributed ledger consensus anchoring Merkle roots and timestamped verification records.</div>
+            </div>
+
+            <!-- 8. Public Verification -->
+            <div class="sec-flow-node">
+              <div class="sec-flow-step-num">Step 08</div>
+              <div class="sec-flow-title">8. Public Verification</div>
+              <div class="sec-flow-desc">Sub-second decentralized proof verification without exposing sensitive citizen information.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           9. SYSTEM DASHBOARD PREVIEW
+           ==================================================================== -->
+      <section class="section-wrapper" id="dashboard">
+        <div class="container">
+          <div class="section-head" style="text-align: center; max-width: 720px; margin: 0 auto 36px auto;">
+            <span class="section-kicker">GOVERNANCE TELEMETRY</span>
+            <h2 class="h2-title" style="margin-top: 10px; margin-bottom: 14px;">System Operations Dashboard</h2>
+            <p class="body-text">
+              Real-time throughput metrics, verified transactions, and security intercept telemetry.
+            </p>
+          </div>
+
+          <div class="stats-metrics-grid">
+            <div class="metric-card">
+              <span class="metric-title">DOCUMENTS REGISTERED</span>
+              <span class="metric-number tabular-nums">14,289</span>
+              <span class="metric-delta">State certified certificates</span>
+            </div>
+
+            <div class="metric-card">
+              <span class="metric-title">DOCUMENTS VERIFIED</span>
+              <span class="metric-number tabular-nums" style="color: var(--color-success);">98,412</span>
+              <span class="metric-delta" style="color: var(--color-success);">99.2% authentic checks</span>
+            </div>
+
+            <div class="metric-card">
+              <span class="metric-title">PENDING APPROVALS</span>
+              <span class="metric-number tabular-nums" style="color: var(--color-warning);">37</span>
+              <span class="metric-delta" style="color: var(--color-warning);">In officer queues</span>
+            </div>
+
+            <div class="metric-card">
+              <span class="metric-title">BLOCKCHAIN RECORDS</span>
+              <span class="metric-number tabular-nums" style="color: var(--accent-blue);">14,289</span>
+              <span class="metric-delta">Block #1027 current height</span>
+            </div>
+
+            <div class="metric-card">
+              <span class="metric-title">VERIFICATION REQUESTS</span>
+              <span class="metric-number tabular-nums">1,842</span>
+              <span class="metric-delta">Last 24 hours query load</span>
+            </div>
+
+            <div class="metric-card">
+              <span class="metric-title">SECURITY EVENTS</span>
+              <span class="metric-number tabular-nums" style="color: var(--color-success);">0 BREACHES</span>
+              <span class="metric-delta" style="color: var(--color-success);">243 tampered files blocked</span>
+            </div>
+          </div>
+
+          <div style="text-align: center; margin-top: 36px;">
+            <a href="/dashboard.html" class="btn-secondary">
+              Launch Full Government Officer Dashboard &rarr;
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           10. USER ROLES
+           ==================================================================== -->
+      <section class="section-wrapper" id="roles" style="background: var(--bg-secondary);">
+        <div class="container">
+          <div class="section-head" style="text-align: center; max-width: 720px; margin: 0 auto 48px auto;">
+            <span class="section-kicker">ACCESS CONTROL</span>
+            <h2 class="h2-title" style="margin-top: 10px; margin-bottom: 14px;">Tailored Stakeholder Experiences</h2>
+            <p class="body-text">
+              Fine-grained privileges built specifically for Citizens, Reviewing Officers, and External Verifiers.
+            </p>
+          </div>
+
+          <div class="roles-3-grid">
+            <!-- 1. Citizen -->
+            <div class="role-3-card">
+              <div class="role-3-icon" style="background: rgba(56, 189, 248, 0.1); color: var(--accent-blue);">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+              </div>
+              <h3 class="role-3-title">Citizen</h3>
+              <p class="body-text">Empowers applicants to securely submit official records and manage their digital identity.</p>
+              <ul class="role-3-features-list">
+                <li>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Upload government documents securely</span>
+                </li>
+                <li>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Track review status and blockchain minting</span>
+                </li>
+                <li>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Verify personal deeds with tamper protection</span>
+                </li>
+              </ul>
+              <a href="/upload.html" class="btn-secondary" style="margin-top: auto;">Submit or Update Document</a>
+            </div>
+
+            <!-- 2. Government Officer -->
+            <div class="role-3-card" style="border-color: var(--border-accent);">
+              <div class="role-3-icon" style="background: rgba(139, 92, 246, 0.15); color: var(--accent-purple);">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/></svg>
+              </div>
+              <h3 class="role-3-title">Government Officer</h3>
+              <p class="body-text">Authorized municipal agents responsible for authenticating and digitally signing submissions.</p>
+              <ul class="role-3-features-list">
+                <li>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Review citizen document submission queues</span>
+                </li>
+                <li>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Approve or reject dockets with reason codes</span>
+                </li>
+                <li>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Register and sign immutable blockchain records</span>
+                </li>
+              </ul>
+              <a href="/dashboard.html" class="btn-primary" style="margin-top: auto;">Officer Dashboard</a>
+            </div>
+
+            <!-- 3. Verifier -->
+            <div class="role-3-card">
+              <div class="role-3-icon" style="background: rgba(16, 185, 129, 0.1); color: var(--color-success);">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+              </div>
+              <h3 class="role-3-title">Verifier</h3>
+              <p class="body-text">Third-party entities like universities, banks, and employers needing independent verification.</p>
+              <ul class="role-3-features-list">
+                <li>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Verify document authenticity in sub-seconds</span>
+                </li>
+                <li>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Inspect public blockchain records and hashes</span>
+                </li>
+                <li>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Validate officer digital signatures and keys</span>
+                </li>
+              </ul>
+              <a href="#verification" class="btn-secondary" style="margin-top: auto;">Verify Certificate</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           11. AUDIT TRAIL
+           ==================================================================== -->
+      <section class="section-wrapper" id="audit">
+        <div class="container">
+          <div class="section-head" style="text-align: center; max-width: 720px; margin: 0 auto 36px auto;">
+            <span class="section-kicker">CHRONOLOGICAL AUDIT TRAIL</span>
+            <h2 class="h2-title" style="margin-top: 10px; margin-bottom: 14px;">Immutable Audit Event Log</h2>
+            <p class="body-text">
+              Every action within the governance workflow is cryptographically anchored in an append-only verifiable timeline.
+            </p>
+          </div>
+
+          <div class="audit-flow-container">
+            <div class="audit-events-stream">
+              <!-- Event 1: Uploaded -->
+              <div class="audit-stream-item">
+                <div class="audit-event-left">
+                  <div class="audit-event-icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+                  </div>
+                  <div>
+                    <div class="audit-event-name">Document Uploaded</div>
+                    <div class="audit-event-meta">Applicant submitted Certificate DOC-2026-8841-IND · Client SHA-256 generated</div>
+                  </div>
+                </div>
+                <div class="audit-event-right">
+                  <span>29 Sep 2026 14:15:02</span>
+                  <span class="block-status-pill">INGESTED</span>
+                </div>
+              </div>
+
+              <!-- Event 2: Reviewed -->
+              <div class="audit-stream-item">
+                <div class="audit-event-left">
+                  <div class="audit-event-icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+                  </div>
+                  <div>
+                    <div class="audit-event-name">Document Reviewed</div>
+                    <div class="audit-event-meta">Inspector Elena Rostova opened verification docket and validated criteria</div>
+                  </div>
+                </div>
+                <div class="audit-event-right">
+                  <span>29 Sep 2026 14:18:22</span>
+                  <span class="block-status-pill">REVIEWED</span>
+                </div>
+              </div>
+
+              <!-- Event 3: Approved -->
+              <div class="audit-stream-item">
+                <div class="audit-event-left">
+                  <div class="audit-event-icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  </div>
+                  <div>
+                    <div class="audit-event-name">Document Approved</div>
+                    <div class="audit-event-meta">Municipal approval granted by Vital Deeds Department</div>
+                  </div>
+                </div>
+                <div class="audit-event-right">
+                  <span>29 Sep 2026 14:20:05</span>
+                  <span class="block-status-pill">APPROVED</span>
+                </div>
+              </div>
+
+              <!-- Event 4: Hash Generated & Signed -->
+              <div class="audit-stream-item">
+                <div class="audit-event-left">
+                  <div class="audit-event-icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/></svg>
+                  </div>
+                  <div>
+                    <div class="audit-event-name">Hash Generated & Signature Applied</div>
+                    <div class="audit-event-meta">ECDSA secp256k1 signature sealed onto 9e4c1b50...4501 digest</div>
+                  </div>
+                </div>
+                <div class="audit-event-right">
+                  <span>29 Sep 2026 14:21:40</span>
+                  <span class="block-status-pill">SIGNED</span>
+                </div>
+              </div>
+
+              <!-- Event 5: Blockchain Registered -->
+              <div class="audit-stream-item">
+                <div class="audit-event-left">
+                  <div class="audit-event-icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/></svg>
+                  </div>
+                  <div>
+                    <div class="audit-event-name">Blockchain Registered</div>
+                    <div class="audit-event-meta">Minted into Block #1024 · Tx 0x7fa2c8...39d1 · Merkle root confirmed</div>
+                  </div>
+                </div>
+                <div class="audit-event-right">
+                  <span>29 Sep 2026 14:22:10</span>
+                  <span class="block-status-pill">MINTHOOD</span>
+                </div>
+              </div>
+
+              <!-- Event 6: Verified -->
+              <div class="audit-stream-item">
+                <div class="audit-event-left">
+                  <div class="audit-event-icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  </div>
+                  <div>
+                    <div class="audit-event-name">Document Verified</div>
+                    <div class="audit-event-meta">Public verification query executed successfully · 0-bit discrepancy</div>
+                  </div>
+                </div>
+                <div class="audit-event-right">
+                  <span>30 Sep 2026 00:45:11</span>
+                  <span class="block-status-pill" style="color: var(--color-success);">VERIFIED</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           12. PUBLIC VERIFICATION & PRIVACY (ZERO-KNOWLEDGE CONCEPT)
+           ==================================================================== -->
+      <section class="section-wrapper" id="privacy" style="background: var(--bg-secondary);">
+        <div class="container">
+          <div class="about-system-grid">
+            <div>
+              <span class="section-kicker">SELECTIVE DISCLOSURE & PRIVACY</span>
+              <h2 class="h2-title" style="margin-top: 10px; margin-bottom: 18px;">
+                Verify Authenticity Without Exposing Sensitive Information
+              </h2>
+              <p class="body-text" style="margin-bottom: 16px;">
+                In traditional governance, proving an electronic certificate requires showing the complete unredacted paper document — exposing national identity numbers, biometric scans, home addresses, and financial balances to unverified third parties.
+              </p>
+              <p class="body-text">
+                With <strong>VERIDEX Zero-Knowledge Verification</strong>, cryptographic proofs mathematically demonstrate validity, official issuance, and validity status without revealing the underlying private citizen data.
+              </p>
+
+              <div style="margin-top: 24px; display: flex; gap: 16px;">
+                <a href="#verification" class="btn-primary">Try Privacy-Preserving Verification</a>
+              </div>
+            </div>
+
+            <!-- Minimal Privacy / Security Visual -->
+            <div class="about-vis-card" style="text-align: center;">
+              <div style="width: 80px; height: 80px; border-radius: 50%; background: rgba(56, 189, 248, 0.1); border: 2px solid var(--accent-blue); display: flex; align-items: center; justify-content: center; margin: 0 auto 20px auto; color: var(--accent-blue); box-shadow: 0 0 30px rgba(56, 189, 248, 0.25);">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </div>
+
+              <h3 style="font-size: 1.2rem; font-weight: 700; color: var(--text-primary); margin-bottom: 8px;">
+                Zero-Knowledge Proof (BN254)
+              </h3>
+              <p style="font-size: 0.85rem; color: var(--text-secondary); max-width: 320px; margin: 0 auto 16px auto; line-height: 1.5;">
+                Proves statement truth: "This document is valid and signed by Ministry of Revenue" without leaking document plaintext.
+              </p>
+
+              <div style="background: #F8FAFC; border: 1px solid var(--border-subtle); border-radius: 8px; padding: 12px; font-family: var(--font-mono); font-size: 0.74rem; color: var(--accent-blue);">
+                π = { A ∈ G1, B ∈ G2, C ∈ G1 } · Zero Citizen Leakage
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           13. FINAL CALL-TO-ACTION (CTA)
+           ==================================================================== -->
+      <section class="final-cta-section">
+        <div class="container">
+          <div class="final-cta-card">
+            <h2 class="final-cta-title">
+              Trust Every Document.<br />
+              <span class="gradient-accent">Verify Every Record.</span>
+            </h2>
+            <p class="final-cta-lead">
+              Build a more secure and transparent digital government with blockchain-backed document verification.
+            </p>
+            <div class="final-cta-buttons">
+              <a href="#verification" class="btn-primary" style="padding: 14px 28px; font-size: 1rem;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                Verify a Document
+              </a>
+              <a href="#security" class="btn-secondary" style="padding: 14px 28px; font-size: 1rem;">
+                Explore Security Architecture
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           14. CONTACT SECTION
+           ==================================================================== -->
+      <section class="contact-section-wrapper" id="contact">
+        <div class="container">
+          <div class="contact-card">
+            <div style="text-align: center; margin-bottom: 24px;">
+              <span class="section-kicker">GOVERNMENT INTEGRATION</span>
+              <h2 class="h2-title" style="margin-top: 8px; margin-bottom: 10px; font-size: 2rem;">Inquire with the Command Center</h2>
+              <p class="body-text" style="font-size: 0.95rem;">
+                Municipalities, national ministries, and academic institutions can request technical dockets and blockchain node deployment kits.
+              </p>
+            </div>
+
+            <form id="contactForm" onsubmit="event.preventDefault(); window.dispatchEvent(new CustomEvent('veridex-contact-submit'));">
+              <div class="contact-form-grid">
+                <div class="contact-input-group">
+                  <label class="contact-label" for="contactName">Official Name</label>
+                  <input type="text" id="contactName" class="contact-input" placeholder="e.g. Director Marcus Vance" required />
+                </div>
+
+                <div class="contact-input-group">
+                  <label class="contact-label" for="contactEmail">Department Email</label>
+                  <input type="email" id="contactEmail" class="contact-input" placeholder="e.g. m.vance@gov.revenue.org" required />
+                </div>
+
+                <div class="contact-input-group">
+                  <label class="contact-label" for="contactDept">Government Agency / Organization</label>
+                  <input type="text" id="contactDept" class="contact-input" placeholder="e.g. State Department of Land Deeds" required />
+                </div>
+
+                <div class="contact-input-group">
+                  <label class="contact-label" for="contactType">Inquiry Type</label>
+                  <select id="contactType" class="contact-input">
+                    <option value="node">Validator Node Deployment</option>
+                    <option value="integration">API & SDK Integration</option>
+                    <option value="audit">Security & Cryptographic Audit</option>
+                    <option value="citizen">Citizen Verification Support</option>
+                  </select>
+                </div>
+
+                <div class="contact-input-group full-width">
+                  <label class="contact-label" for="contactMessage">Message / Project Requirements</label>
+                  <textarea id="contactMessage" class="contact-input" rows="4" placeholder="Detail your municipal document volume, target jurisdiction, or verification infrastructure..." required></textarea>
+                </div>
+              </div>
+
+              <div style="text-align: center; margin-top: 24px;">
+                <button type="submit" class="btn-primary" style="padding: 12px 32px;">
+                  Transmit Official Inquiry
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Role-Based Access Modal (Auth Simulation) -->
+    <div class="modal-overlay" id="roleAuthModal">
+      <div class="modal-window">
+        <div class="modal-header">
+          <h3 class="modal-title">Select Security Persona</h3>
+          <button class="modal-close-btn">&times;</button>
+        </div>
+        <div class="modal-body">
+          <p style="font-size: 0.86rem; color: var(--text-secondary); margin-bottom: 16px;">
+            Switch active permissions to experience VERIDEX from distinct stakeholder perspectives:
+          </p>
+
+          <div class="role-choice-grid">
+            <div class="role-choice-card" data-role="citizen">
+              <div class="role-choice-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+              </div>
+              <div>
+                <div class="role-choice-name">Citizen / Applicant</div>
+                <div class="role-choice-desc">Submit new certificates, calculate client SHA-256, verify personal deeds.</div>
+              </div>
+            </div>
+
+            <div class="role-choice-card active" data-role="officer">
+              <div class="role-choice-icon" style="color: var(--accent-blue); background: rgba(56,189,248,0.15);">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/></svg>
+              </div>
+              <div>
+                <div class="role-choice-name">Government Officer (Active)</div>
+                <div class="role-choice-desc">Access approval queue, inspect hashes, apply cryptographic signatures.</div>
+              </div>
+            </div>
+
+            <div class="role-choice-card" data-role="admin">
+              <div class="role-choice-icon" style="color: var(--accent-purple); background: rgba(139,92,246,0.15);">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-2 2 2 2 0 01-2-2v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H3a2 2 0 01-2-2 2 2 0 012-2h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 010-2.83 2 2 0 012.83 0l.06.06a1.65 1.65 0 001.82.33H9a1.65 1.65 0 001-1.51V3a2 2 0 012-2 2 2 0 012 2v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 0 2 2 0 010 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V9a1.65 1.65 0 001.51 1H21a2 2 0 012 2 2 2 0 01-2 2h-.09a1.65 1.65 0 00-1.51 1z"/></svg>
+              </div>
+              <div>
+                <div class="role-choice-name">System Administrator</div>
+                <div class="role-choice-desc">Full chain explorer controls, consensus telemetry, and raw audit exports.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Verification Receipt Modal -->
+    <div class="modal-overlay" id="verificationReceiptModal">
+      <div class="modal-window" style="max-width: 580px;">
+        <div class="modal-header">
+          <h3 class="modal-title">Official Verification Certificate</h3>
+          <button class="modal-close-btn" id="closeReceiptModalBtn">&times;</button>
+        </div>
+        <div class="modal-body" id="receiptModalBody">
+          <div style="background: #F8FAFC; border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 24px; text-align: center; box-shadow: var(--shadow-card);">
+            <div style="color: var(--color-success); font-size: 2rem; margin-bottom: 8px;">✓</div>
+            <div style="font-size: 1.15rem; font-weight: 700; color: var(--text-primary);">STATE CRYPTOGRAPHIC SEAL</div>
+            <div style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 16px;">National E-Governance Verification Protocol v3.4</div>
+
+            <div style="text-align: left; background: #FFFFFF; border: 1px solid var(--border-subtle); border-radius: 8px; padding: 16px; font-size: 0.82rem; line-height: 1.6;">
+              <div><strong>Document ID:</strong> <span id="certDocId" class="tabular-nums">DOC-2026-8841-IND</span></div>
+              <div><strong>Verification Status:</strong> <span style="color: var(--color-success); font-weight: 700;">AUTHENTICATED & VALID</span></div>
+              <div><strong>Blockchain Height:</strong> <span id="certBlockHeight" class="tabular-nums">Block #1024</span></div>
+              <div><strong>Signing Authority:</strong> <span id="certOfficer">Inspector Elena Rostova (GOV-OFF-402)</span></div>
+              <div><strong>Timestamp:</strong> <span id="certTimestamp">30 Sep 2026 01:05:00 UTC</span></div>
+              <div style="margin-top: 8px; font-family: var(--font-mono); font-size: 0.72rem; word-break: break-all; color: var(--accent-blue);">
+                <strong>SHA-256 Digest:</strong> <span id="certHash">9e4c1b50428ad8198fb9ec2b10dfd32213e481c15f9b48b6c434220b22bc4501</span>
+              </div>
+            </div>
+
+            <div style="margin-top: 20px; display: flex; gap: 10px;">
+              <button class="btn-primary" onclick="window.print()" style="flex: 1;">
+                Print Official Proof
+              </button>
+              <button class="btn-secondary" id="closeReceiptBtn2">
+                Done
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Toast Notification Anchor -->
+    <div id="toastContainer"></div>
+
+    <!-- ====================================================================
+         15. FOOTER
+         ==================================================================== -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand-col">
+            <a href="#home" class="brand-link">
+              <div class="brand-crest">
+                <svg viewBox="0 0 24 24"><path d="M12 2L3 7v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-9-5z"/></svg>
+              </div>
+              <span class="brand-text">VERIDEX</span>
+            </a>
+            <p class="footer-brand-desc" style="font-weight: 600; color: var(--text-primary); margin-top: 8px;">
+              Blockchain-Enabled E-Governance System
+            </p>
+            <p class="footer-brand-desc" style="color: var(--accent-blue); font-size: 0.84rem; font-weight: 500;">
+              Secure • Transparent • Verifiable
+            </p>
+            <p class="footer-brand-desc" style="font-size: 0.8rem; margin-top: 8px;">
+              Designed for trusted digital governance ecosystems, combining NIST FIPS 180-4 SHA-256 integrity, ECDSA digital signatures, and Groth16 zero-knowledge proofs.
+            </p>
+          </div>
+
+          <div>
+            <h4 class="footer-col-title">Navigation</h4>
+            <ul class="footer-links-list">
+              <li><a href="#home" class="footer-link">Home</a></li>
+              <li><a href="#about" class="footer-link">About System</a></li>
+              <li><a href="#features" class="footer-link">Key Features</a></li>
+              <li><a href="#how-it-works" class="footer-link">How It Works</a></li>
+              <li><a href="#verification" class="footer-link">Document Verification</a></li>
+              <li><a href="#security" class="footer-link">Security Architecture</a></li>
+              <li><a href="#contact" class="footer-link">Contact</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="footer-col-title">Applications</h4>
+            <ul class="footer-links-list">
+              <li><a href="/verify.html" class="footer-link">Standalone Verifier</a></li>
+              <li><a href="/upload.html" class="footer-link">Citizen Submission</a></li>
+              <li><a href="/dashboard.html" class="footer-link">Officer Dashboard</a></li>
+              <li><a href="/blockchain.html" class="footer-link">Blockchain Explorer</a></li>
+              <li><a href="/audit.html" class="footer-link">Audit Trail Console</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="footer-col-title">Security & Standards</h4>
+            <ul class="footer-links-list">
+              <li><span class="footer-link">NIST FIPS 180-4 (SHA-256)</span></li>
+              <li><span class="footer-link">ECDSA secp256k1 Signatures</span></li>
+              <li><span class="footer-link">W3C Verifiable Credentials</span></li>
+              <li><span class="footer-link">Zero-Knowledge BN254</span></li>
+              <li><span class="footer-link">ISO/IEC 27001 Ready</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom-bar">
+          <div>&copy; 2026 VERIDEX E-Governance Protocol. All cryptographic rights reserved.</div>
+          <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--accent-blue);">
+            Blockchain-Enabled E-Governance System · Secure • Transparent • Verifiable
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Modular Vanilla JavaScript Scripts -->
+    <script type="module" src="/js/utils.js"></script>
+    <script type="module" src="/js/auth.js"></script>
+    <script type="module" src="/js/motion3d.js"></script>
+    <script type="module" src="/js/verification.js"></script>
+    <script type="module" src="/js/app.js"></script>
+
+    <script type="module">
+      import { VeridexVerifier } from '/js/verification.js';
+      import { VeridexAuth } from '/js/auth.js';
+      import { VeridexUtils } from '/js/utils.js';
+
+      document.addEventListener('DOMContentLoaded', () => {
+        // Initialize interactive verification workspace on the landing page
+        VeridexVerifier.init('verifyInterface');
+
+        // Sticky Navbar darkens on scroll
+        const header = document.getElementById('siteHeader');
+        window.addEventListener('scroll', () => {
+          if (window.scrollY > 40) {
+            header.style.background = 'rgba(7, 11, 20, 0.95)';
+            header.style.borderColor = 'rgba(56, 189, 248, 0.2)';
+          } else {
+            header.style.background = 'rgba(7, 11, 20, 0.85)';
+            header.style.borderColor = 'var(--border-subtle)';
+          }
+        }, { passive: true });
+
+        // Contact Form Submission Handler
+        window.addEventListener('veridex-contact-submit', () => {
+          VeridexUtils.showToast('Official inquiry transmitted to State E-Governance Directorate.', 'success');
+          const form = document.getElementById('contactForm');
+          if (form) form.reset();
+        });
+
+        // Block Interactive Click-to-Inspect
+        document.querySelectorAll('.block-interactive-card').forEach(card => {
+          card.addEventListener('click', () => {
+            const blockNum = card.getAttribute('data-block');
+            VeridexUtils.showToast(`Inspecting Block #${blockNum} payload & Merkle proof.`, 'info');
+          });
+        });
+
+        // Receipt modal close handlers
+        const receiptModal = document.getElementById('verificationReceiptModal');
+        const closeBtn1 = document.getElementById('closeReceiptModalBtn');
+        const closeBtn2 = document.getElementById('closeReceiptBtn2');
+        const closeReceipt = () => {
+          if (receiptModal) receiptModal.classList.remove('open');
+        };
+        if (closeBtn1) closeBtn1.addEventListener('click', closeReceipt);
+        if (closeBtn2) closeBtn2.addEventListener('click', closeReceipt);
+
+        // Hook up "Download Verification Certificate" button
+        const dlBtn = document.getElementById('downloadReceiptBtn');
+        if (dlBtn && receiptModal) {
+          dlBtn.addEventListener('click', () => {
+            receiptModal.classList.add('open');
+          });
+        }
+      });
+    </script>
+
+    <!-- ====================================================================
+         iPhone Home Screen Bottom Dock Navigation System
+         ==================================================================== -->
+    <nav class="iphone-dock-wrapper" aria-label="iPhone Home Screen Bottom Navigation">
+      <div class="iphone-dock" role="navigation">
+        <!-- 1. Home -->
+        <a href="#home" class="iphone-dock-item active" data-section="home" aria-label="Home Section">
+          <div class="iphone-app-icon iphone-icon-home">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </div>
+          <span class="iphone-app-label">Home</span>
+        </a>
+
+        <!-- 2. About -->
+        <a href="#about" class="iphone-dock-item" data-section="about" aria-label="About Project">
+          <div class="iphone-app-icon iphone-icon-about">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+          </div>
+          <span class="iphone-app-label">About</span>
+        </a>
+
+        <!-- 3. Features -->
+        <a href="#features" class="iphone-dock-item" data-section="features" aria-label="Core Features">
+          <div class="iphone-app-icon iphone-icon-features">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+          </div>
+          <span class="iphone-app-label">Features</span>
+        </a>
+
+        <!-- 4. How It Works -->
+        <a href="#how-it-works" class="iphone-dock-item" data-section="how-it-works" aria-label="Process Workflow">
+          <div class="iphone-app-icon iphone-icon-process">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="6" y1="3" x2="6" y2="15"/><circle cx="18" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M18 9a9 9 0 0 1-9 9"/></svg>
+          </div>
+          <span class="iphone-app-label">Process</span>
+        </a>
+
+        <!-- 5. Verification (Featured Center Action) -->
+        <a href="#verification" class="iphone-dock-item featured" data-section="verification" aria-label="Verify Document">
+          <div class="iphone-app-icon iphone-icon-verify">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </div>
+          <span class="iphone-app-label" style="font-weight: 700; color: var(--accent-blue);">Verify</span>
+        </a>
+
+        <!-- 6. Security -->
+        <a href="#security" class="iphone-dock-item" data-section="security" aria-label="Security Layers">
+          <div class="iphone-app-icon iphone-icon-security">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          </div>
+          <span class="iphone-app-label">Security</span>
+        </a>
+
+        <!-- 7. Submit / Update -->
+        <a href="/upload.html" class="iphone-dock-item" aria-label="Document Intake & Update">
+          <div class="iphone-app-icon iphone-icon-upload">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><line x1="9" y1="15" x2="15" y2="15"/></svg>
+          </div>
+          <span class="iphone-app-label">Submit/Edit</span>
+        </a>
+
+        <!-- 8. Contact -->
+        <a href="#contact" class="iphone-dock-item" data-section="contact" aria-label="Contact Section">
+          <div class="iphone-app-icon iphone-icon-contact">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <span class="iphone-app-label">Contact</span>
+        </a>
+      </div>
+
+      <!-- iPhone Home Indicator Bar -->
+      <div class="iphone-home-indicator" aria-hidden="true"></div>
+    </nav>
+  </body>
+</html>

@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Verify Document Authenticity — TEAM PROJECT</title>
+    <meta name="description" content="Verify government document authenticity using client-side SHA-256 calculation and blockchain validation." />
+    <link rel="stylesheet" href="/css/animations.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/dashboard.css" />
+  </head>
+  <body>
+    <!-- Ambient 3D Motion Design Canvas -->
+    <canvas id="particleCanvas"></canvas>
+
+    <!-- Top Minimal Sticky Header -->
+    <header class="site-header">
+      <div class="container header-inner" style="justify-content: space-between;">
+        <a href="/index.html" class="brand-link" aria-label="TEAM PROJECT Homepage">
+          <div class="brand-crest">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 2L3 7v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-9-5zm0 4a3 3 0 110 6 3 3 0 010-6zm4 11.2c-1.12.56-2.5.8-4 .8s-2.88-.24-4-.8V15.5c0-1.33 2.67-2 4-2s4 .67 4 2v1.7z" />
+            </svg>
+          </div>
+          <span class="brand-text">TEAM PROJECT</span>
+        </a>
+
+        <!-- Status Badge -->
+        <div class="header-status-badge">
+          <span class="live-dot"></span>
+          <span>CRYPTOGRAPHIC VERIFIER · NIST SHA-256</span>
+        </div>
+
+        <div class="header-actions">
+          <button class="role-pill-btn trigger-role-modal" aria-label="Active Security Persona">
+            <span class="role-dot current-role-dot"></span>
+            <span class="current-role-label">Government Officer</span>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <div class="verify-container-main" id="verifyInterface">
+        <!-- Title & Intro -->
+        <div style="text-align: center; display: flex; flex-direction: column; gap: 8px;">
+          <span class="section-kicker">CRYPTOGRAPHIC ATTESTATION</span>
+          <h1 class="section-title" style="font-size: 2.4rem;">Verify Document Authenticity</h1>
+          <p class="section-subtitle" style="max-width: 640px; margin: 0 auto;">
+            Upload any digital certificate or government deed. The platform computes an in-browser SHA-256 hash and verifies its integrity against the immutable blockchain ledger.
+          </p>
+        </div>
+
+        <!-- Sample Records Quick Bar (for testing) -->
+        <div style="background: #F8FAFC; border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 16px 20px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; box-shadow: var(--shadow-card);">
+          <div style="font-size: 0.8rem; font-weight: 600; color: var(--text-secondary); display: flex; align-items: center; gap: 8px;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+            Quick Test Authentic Records:
+          </div>
+          <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+            <button class="btn-table-action review sample-doc-btn" data-sample="land">
+              Land Deed #8941
+            </button>
+            <button class="btn-table-action review sample-doc-btn" data-sample="income">
+              Income Certificate #8942
+            </button>
+            <button class="btn-table-action review sample-doc-btn" data-sample="education">
+              Degree Certificate #8943
+            </button>
+            <button class="btn-table-action reject sample-doc-btn" data-sample="tampered" title="Simulates a forged or tampered file">
+              ⚠ Test Tampered File
+            </button>
+          </div>
+        </div>
+
+        <!-- Upload Drag & Drop Area -->
+        <div class="upload-dropzone" id="verifyDropzone">
+          <input type="file" id="verifyFileInput" style="display: none;" accept=".pdf,.png,.jpg,.jpeg,.doc,.docx" />
+          <div class="dropzone-icon-box">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+          </div>
+          <div>
+            <div style="font-size: 1.15rem; font-weight: 700; color: var(--text-primary); margin-bottom: 4px;">
+              Drag & Drop government document here, or <span style="color: var(--accent-cyan); text-decoration: underline;">browse</span>
+            </div>
+            <div style="font-size: 0.84rem; color: var(--text-secondary);">
+              Supports PDF, PNG, JPEG, TIFF (Max 25MB). Calculations run client-side via Web Crypto API.
+            </div>
+          </div>
+        </div>
+
+        <!-- Selected File Preview Card (Hidden initially) -->
+        <div class="file-info-preview-card" id="filePreviewCard" style="display: none;">
+          <div style="display: flex; align-items: center; gap: 16px; overflow: hidden;">
+            <div style="width: 44px; height: 44px; border-radius: var(--radius-md); background: rgba(2,132,199,0.1); border: 1px solid var(--border-accent); display: flex; align-items: center; justify-content: center; color: var(--accent-cyan); flex-shrink: 0;">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            </div>
+            <div style="overflow: hidden;">
+              <div style="font-weight: 700; color: var(--text-primary); font-size: 0.95rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" id="selectedFileName">document.pdf</div>
+              <div style="font-size: 0.78rem; color: var(--text-muted); font-family: var(--font-mono);" id="selectedFileSize">2.4 MB</div>
+              <div style="font-size: 0.76rem; color: var(--accent-cyan); font-family: var(--font-mono); margin-top: 4px; word-break: break-all;" id="selectedFileHash">e3b0c442...</div>
+            </div>
+          </div>
+          <div style="display: flex; gap: 10px; flex-shrink: 0;">
+            <button class="btn-secondary" id="resetVerifyBtn">Remove</button>
+            <button class="btn-primary" id="startVerifyBtn">
+              Execute Verification
+            </button>
+          </div>
+        </div>
+
+        <!-- Stepped Verification Pipeline (Appears during verification) -->
+        <div id="verifyPipelineSteps" class="verify-progress-steps" style="display: none;">
+          <!-- Step 1 -->
+          <div class="v-step-item" id="vStep1">
+            <div class="v-step-icon">1</div>
+            <div>
+              <div class="v-step-text-title">DOCUMENT RECEIVED</div>
+              <div class="v-step-text-desc">Validating binary file envelope and reading buffer</div>
+            </div>
+            <div class="v-step-status" style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted);">Waiting</div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="v-step-item" id="vStep2">
+            <div class="v-step-icon">2</div>
+            <div>
+              <div class="v-step-text-title">GENERATING HASH</div>
+              <div class="v-step-text-desc">Web Crypto API crypto.subtle.digest("SHA-256") calculation</div>
+            </div>
+            <div class="v-step-status" style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted);">Waiting</div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="v-step-item" id="vStep3">
+            <div class="v-step-icon">3</div>
+            <div>
+              <div class="v-step-text-title">SEARCHING BLOCKCHAIN</div>
+              <div class="v-step-text-desc">Matching calculated fingerprint against Merkle block tree</div>
+            </div>
+            <div class="v-step-status" style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted);">Waiting</div>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="v-step-item" id="vStep4">
+            <div class="v-step-icon">4</div>
+            <div>
+              <div class="v-step-text-title">VALIDATING SIGNATURE</div>
+              <div class="v-step-text-desc">Validating authorized officer ECDSA secp256k1 public key</div>
+            </div>
+            <div class="v-step-status" style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted);">Waiting</div>
+          </div>
+
+          <!-- Step 5 -->
+          <div class="v-step-item" id="vStep5">
+            <div class="v-step-icon">5</div>
+            <div>
+              <div class="v-step-text-title">VERIFYING PRIVACY PROOF</div>
+              <div class="v-step-text-desc">Zero-knowledge proof validation via Groth16 on BN254</div>
+            </div>
+            <div class="v-step-status" style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted);">Waiting</div>
+          </div>
+
+          <!-- Step 6 -->
+          <div class="v-step-item" id="vStep6">
+            <div class="v-step-icon">6</div>
+            <div>
+              <div class="v-step-text-title">AUTHENTICITY RESULT</div>
+              <div class="v-step-text-desc">Synthesizing cryptographic attestation verdict</div>
+            </div>
+            <div class="v-step-status" style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted);">Waiting</div>
+          </div>
+        </div>
+
+        <!-- Verification Result Container (Success or Failed) -->
+        <div id="verificationResultContainer" style="display: none;"></div>
+      </div>
+    </main>
+
+    <!-- Role Modal -->
+    <div class="modal-overlay" id="roleAuthModal">
+      <div class="modal-window">
+        <div class="modal-header">
+          <h3 class="modal-title">Select Security Persona</h3>
+          <button class="modal-close-btn">&times;</button>
+        </div>
+        <div class="modal-body">
+          <div class="role-choice-grid">
+            <div class="role-choice-card" data-role="citizen">
+              <div class="role-choice-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+              <div><div class="role-choice-name">Citizen / Applicant</div><div class="role-choice-desc">Submit new certificates, verify personal deeds.</div></div>
+            </div>
+            <div class="role-choice-card active" data-role="officer">
+              <div class="role-choice-icon" style="color: var(--accent-cyan);"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/></svg></div>
+              <div><div class="role-choice-name">Government Officer</div><div class="role-choice-desc">Access approval queue, digitally sign documents.</div></div>
+            </div>
+            <div class="role-choice-card" data-role="admin">
+              <div class="role-choice-icon" style="color: var(--accent-violet);"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-2 2 2 2 0 01-2-2v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H3a2 2 0 01-2-2 2 2 0 012-2h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 010-2.83 2 2 0 012.83 0l.06.06a1.65 1.65 0 001.82.33H9a1.65 1.65 0 001-1.51V3a2 2 0 012-2 2 2 0 012 2v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 0 2 2 0 010 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V9a1.65 1.65 0 001.51 1H21a2 2 0 012 2 2 2 0 01-2 2h-.09a1.65 1.65 0 00-1.51 1z"/></svg></div>
+              <div><div class="role-choice-name">System Administrator</div><div class="role-choice-desc">Consensus telemetry and raw audit exports.</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="toastContainer"></div>
+
+    <script type="module" src="/js/motion3d.js"></script>
+    <script type="module">
+      import { VeridexVerifier } from '/js/verification.js';
+      import { VeridexAuth } from '/js/auth.js';
+      document.addEventListener('DOMContentLoaded', () => {
+        VeridexVerifier.init('verifyInterface');
+      });
+    </script>
+
+    <!-- iPhone Home Screen Bottom Dock Navigation System -->
+    <nav class="iphone-dock-wrapper" aria-label="iPhone Home Screen Bottom Navigation">
+      <div class="iphone-dock" role="navigation">
+        <a href="/index.html" class="iphone-dock-item" aria-label="Home">
+          <div class="iphone-app-icon iphone-icon-home">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </div>
+          <span class="iphone-app-label">Home</span>
+        </a>
+
+        <a href="/verify.html" class="iphone-dock-item featured active" aria-label="Verify Document">
+          <div class="iphone-app-icon iphone-icon-verify">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </div>
+          <span class="iphone-app-label" style="font-weight: 700; color: var(--accent-blue);">Verify</span>
+        </a>
+
+        <a href="/upload.html" class="iphone-dock-item" aria-label="Submit or Update Document">
+          <div class="iphone-app-icon iphone-icon-upload">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><line x1="9" y1="15" x2="15" y2="15"/></svg>
+          </div>
+          <span class="iphone-app-label">Submit/Edit</span>
+        </a>
+
+        <a href="/dashboard.html" class="iphone-dock-item" aria-label="Officer Dashboard">
+          <div class="iphone-app-icon iphone-icon-dashboard">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+          </div>
+          <span class="iphone-app-label">Console</span>
+        </a>
+
+        <a href="/blockchain.html" class="iphone-dock-item" aria-label="Blockchain Explorer">
+          <div class="iphone-app-icon iphone-icon-ledger">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+          </div>
+          <span class="iphone-app-label">Ledger</span>
+        </a>
+
+        <a href="/audit.html" class="iphone-dock-item" aria-label="Audit Trail">
+          <div class="iphone-app-icon iphone-icon-security">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          </div>
+          <span class="iphone-app-label">Audit</span>
+        </a>
+      </div>
+      <div class="iphone-home-indicator" aria-hidden="true"></div>
+    </nav>
+  </body>
+</html>

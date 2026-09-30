@@ -1,0 +1,996 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document Intake & Update — TEAM PROJECT</title>
+    <meta name="description" content="Submit official government records or upload revisions to existing documents for cryptographic SHA-256 fingerprinting and authorized officer review." />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/dashboard.css" />
+    <style>
+      /* ==========================================================================
+         Rock-Solid Stability Overrides (Zero Animation, Zero Tilt, Zero Wobble)
+         ========================================================================== */
+      body {
+        background: #FFFFFF !important;
+        background-color: #FFFFFF !important;
+      }
+
+      body::before {
+        display: none !important;
+        content: none !important;
+        transform: none !important;
+      }
+
+      /* Disable all animations and layout-shifting transitions on this page */
+      *, *::before, *::after {
+        animation: none !important;
+      }
+
+      /* Keep only clean, instant, micro-transitions for interactive states */
+      .btn-primary, .btn-secondary, .form-input, .form-select, .form-textarea, .mode-tab-btn {
+        transition: border-color 0.12s ease, background-color 0.12s ease, color 0.12s ease !important;
+        transform: none !important;
+      }
+
+      .btn-primary:hover, .btn-secondary:hover {
+        transform: none !important;
+      }
+
+      .form-panel-card {
+        max-width: 800px;
+        margin: 36px auto 60px auto;
+        background: #FFFFFF !important;
+        border: 1px solid var(--border-subtle) !important;
+        border-radius: var(--radius-xl) !important;
+        padding: 36px !important;
+        box-shadow: 0 1px 4px rgba(15, 23, 42, 0.06), 0 2px 8px rgba(15, 23, 42, 0.04) !important;
+        transform: none !important;
+        transition: none !important;
+      }
+
+      .form-panel-card:hover {
+        transform: none !important;
+      }
+
+      .upload-dropzone {
+        background: #F8FAFC !important;
+        border: 2px dashed var(--border-light) !important;
+        transition: border-color 0.12s ease, background-color 0.12s ease !important;
+        transform: none !important;
+        cursor: pointer;
+      }
+
+      .upload-dropzone:hover, .upload-dropzone.dragover {
+        border-color: var(--accent-blue) !important;
+        background: #F0F9FF !important;
+        transform: none !important;
+      }
+
+      /* Static, non-animated modals for rock-solid stability */
+      .modal-overlay {
+        background: rgba(15, 23, 42, 0.5) !important;
+        backdrop-filter: blur(2px) !important;
+        animation: none !important;
+        transition: none !important;
+      }
+
+      .modal-window {
+        animation: none !important;
+        transition: none !important;
+        transform: none !important;
+        box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1) !important;
+      }
+
+      /* Mode Switcher Tabs */
+      .mode-switcher-container {
+        display: flex;
+        background: #F1F5F9;
+        padding: 4px;
+        border-radius: var(--radius-md);
+        gap: 4px;
+        margin-bottom: 28px;
+        border: 1px solid var(--border-subtle);
+      }
+
+      .mode-tab-btn {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        padding: 10px 16px;
+        font-size: 0.88rem;
+        font-weight: 600;
+        color: var(--text-secondary);
+        background: transparent;
+        border: none;
+        border-radius: var(--radius-sm);
+        cursor: pointer;
+      }
+
+      .mode-tab-btn:hover {
+        color: var(--text-primary);
+      }
+
+      .mode-tab-btn.active {
+        background: #FFFFFF;
+        color: var(--accent-blue);
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+      }
+
+      .quick-chip {
+        padding: 4px 10px;
+        font-size: 0.74rem;
+        font-family: var(--font-mono);
+        font-weight: 500;
+        background: #F8FAFC;
+        border: 1px solid var(--border-subtle);
+        border-radius: var(--radius-full);
+        color: var(--text-secondary);
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+      }
+
+      .quick-chip:hover {
+        background: #F1F5F9;
+        border-color: var(--accent-blue);
+        color: var(--accent-blue);
+      }
+
+      .diff-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+        background: #F8FAFC;
+        border: 1px solid var(--border-subtle);
+        border-radius: var(--radius-md);
+        padding: 14px;
+      }
+
+      @media (max-width: 640px) {
+        .diff-grid {
+          grid-template-columns: 1fr;
+        }
+        .form-panel-card {
+          padding: 20px !important;
+          margin: 16px auto 40px auto;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Top Minimal Sticky Header -->
+    <header class="site-header">
+      <div class="container header-inner" style="justify-content: space-between;">
+        <a href="/index.html" class="brand-link" aria-label="TEAM PROJECT Homepage">
+          <div class="brand-crest">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 2L3 7v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-9-5zm0 4a3 3 0 110 6 3 3 0 010-6zm4 11.2c-1.12.56-2.5.8-4 .8s-2.88-.24-4-.8V15.5c0-1.33 2.67-2 4-2s4 .67 4 2v1.7z" />
+            </svg>
+          </div>
+          <span class="brand-text">TEAM PROJECT</span>
+        </a>
+
+        <!-- Status Badge -->
+        <div class="header-status-badge">
+          <span class="live-dot"></span>
+          <span>DOCUMENT INTAKE & REVISION PROTOCOL</span>
+        </div>
+
+        <div class="header-actions">
+          <button class="role-pill-btn trigger-role-modal" aria-label="Active Security Persona">
+            <span class="role-dot current-role-dot"></span>
+            <span class="current-role-label">Citizen / Applicant</span>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <div class="form-panel-card">
+        <!-- Header -->
+        <div style="margin-bottom: 24px;">
+          <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px;">
+            <span class="section-kicker">GOVERNMENT INTAKE & REVISION PORTAL</span>
+            <span style="font-size: 0.76rem; font-family: var(--font-mono); color: var(--color-success); background: var(--color-success-bg); padding: 3px 8px; border-radius: var(--radius-sm); border: 1px solid rgba(5, 150, 105, 0.2);">
+              ● STABLE CONSOLE MODE
+            </span>
+          </div>
+          <h1 style="font-size: 1.85rem; font-weight: 800; color: var(--text-primary); margin: 6px 0 6px 0; letter-spacing: -0.02em;">
+            Document Management Console
+          </h1>
+          <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.5;">
+            Submit a new municipal certificate or apply an authorized revision/update to an existing document with in-browser SHA-256 cryptographic verification.
+          </p>
+        </div>
+
+        <!-- Mode Toggle Switcher -->
+        <div class="mode-switcher-container" role="tablist">
+          <button type="button" class="mode-tab-btn active" id="tabModeNew" role="tab" aria-selected="true">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><line x1="9" y1="15" x2="15" y2="15"/>
+            </svg>
+            Submit New Document
+          </button>
+          <button type="button" class="mode-tab-btn" id="tabModeUpdate" role="tab" aria-selected="false">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 11-.57-8.38l5.67-5.67"/>
+            </svg>
+            Update Existing Document
+          </button>
+        </div>
+
+        <!-- ==================================================================
+             MODE 1: SUBMIT NEW DOCUMENT FORM
+             ================================================================== -->
+        <form id="docUploadForm">
+          <!-- Document Type -->
+          <div class="form-group">
+            <label class="form-label" for="docType">Document Category *</label>
+            <select id="docType" class="form-select" required>
+              <option value="">Select Certificate Category...</option>
+              <option value="Birth Certificate">Birth Certificate</option>
+              <option value="Income Certificate">Income Certificate</option>
+              <option value="Community Certificate">Community Certificate</option>
+              <option value="Land Record">Land Record</option>
+              <option value="Education Certificate">Education Certificate</option>
+              <option value="Other">Other Government Deed</option>
+            </select>
+          </div>
+
+          <!-- Applicant Name -->
+          <div class="form-group">
+            <label class="form-label" for="applicantName">Applicant Full Name *</label>
+            <input type="text" id="applicantName" class="form-input" placeholder="e.g. Katherine Sterling" required />
+          </div>
+
+          <!-- Document ID -->
+          <div class="form-group">
+            <label class="form-label" for="docId">Document ID / Government Reference</label>
+            <div style="display: flex; gap: 10px;">
+              <input type="text" id="docId" class="form-input" style="font-family: var(--font-mono); font-weight: 600; color: var(--accent-cyan);" readonly />
+              <button type="button" class="btn-secondary" id="regenDocIdBtn" title="Generate New ID">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 11-.57-8.38l5.67-5.67"/></svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Department -->
+          <div class="form-group">
+            <label class="form-label" for="department">Issuing Department *</label>
+            <select id="department" class="form-select" required>
+              <option value="Civil Registry & Vital Statistics">Civil Registry & Vital Statistics</option>
+              <option value="Department of Revenue & Tax">Department of Revenue & Tax</option>
+              <option value="Land Administration & Deeds">Land Administration & Deeds</option>
+              <option value="Higher Education Council">Higher Education Council</option>
+              <option value="Social Welfare Commission">Social Welfare Commission</option>
+              <option value="Municipal Corporation Headquarters">Municipal Corporation Headquarters</option>
+            </select>
+          </div>
+
+          <!-- Document Upload Dropzone -->
+          <div class="form-group">
+            <label class="form-label">Upload Official Document File *</label>
+            <div class="upload-dropzone" id="uploadFileArea" style="padding: 32px 20px; text-align: center;">
+              <input type="file" id="formFileInput" style="display: none;" accept=".pdf,.png,.jpg,.jpeg" required />
+              <div class="dropzone-icon-box" style="width: 48px; height: 48px; margin: 0 auto 10px auto;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+              </div>
+              <div style="font-size: 0.92rem; font-weight: 600; color: var(--text-primary);" id="uploadStatusPrompt">
+                Click or drag & drop file to compute in-browser SHA-256
+              </div>
+              <div style="font-size: 0.78rem; color: var(--text-muted); margin-top: 4px;">
+                Supported formats: PDF, PNG, JPG (Client-side Web Crypto API hashing)
+              </div>
+            </div>
+
+            <!-- Hash Calculation Feedback -->
+            <div id="fileHashPreviewBox" style="display: none; background: #F8FAFC; border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 14px; margin-top: 10px;">
+              <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 4px;">
+                <span style="font-size: 0.72rem; text-transform: uppercase; color: var(--text-muted); font-weight: 700;">
+                  Computed SHA-256 Fingerprint
+                </span>
+                <span style="font-size: 0.72rem; font-family: var(--font-mono); color: var(--color-success); font-weight: 600;">
+                  ✓ CRYPTOGRAPHIC DIGEST READY
+                </span>
+              </div>
+              <div style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--accent-cyan); word-break: break-all; line-height: 1.4;" id="calculatedHashPreview"></div>
+            </div>
+          </div>
+
+          <div style="display: flex; justify-content: flex-end; gap: 14px; margin-top: 28px; padding-top: 20px; border-top: 1px solid var(--border-subtle);">
+            <a href="/index.html" class="btn-secondary">Cancel</a>
+            <button type="submit" class="btn-primary" id="submitDocBtn">
+              Submit for Officer Review
+            </button>
+          </div>
+        </form>
+
+        <!-- ==================================================================
+             MODE 2: UPDATE EXISTING DOCUMENT FORM
+             ================================================================== -->
+        <form id="docUpdateForm" style="display: none;">
+          <!-- Select Target Document -->
+          <div class="form-group">
+            <label class="form-label" for="updateSelectDoc">Select Document to Update / Revise *</label>
+            <select id="updateSelectDoc" class="form-select" required>
+              <option value="">Choose an existing registered document...</option>
+            </select>
+          </div>
+
+          <!-- Quick Test Document Chips -->
+          <div style="margin-bottom: 20px;">
+            <div style="font-size: 0.76rem; color: var(--text-muted); font-weight: 600; margin-bottom: 6px;">
+              QUICK SELECT SAMPLE RECORDS FOR UPDATE:
+            </div>
+            <div style="display: flex; flex-wrap: wrap; gap: 8px;" id="quickDocChipsContainer">
+              <!-- Rendered dynamically -->
+            </div>
+          </div>
+
+          <!-- Existing Document Record Summary Card -->
+          <div id="targetDocSummaryCard" style="display: none; background: #F8FAFC; border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 18px; margin-bottom: 24px;">
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; border-bottom: 1px solid var(--border-subtle); padding-bottom: 8px;">
+              <span style="font-size: 0.76rem; font-weight: 700; text-transform: uppercase; color: var(--text-muted);">
+                Active Document Registry Info
+              </span>
+              <span id="targetDocStatusBadge" class="status-badge pending">PENDING</span>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 14px; margin-bottom: 14px;">
+              <div>
+                <div style="font-size: 0.72rem; color: var(--text-muted); text-transform: uppercase;">Document ID</div>
+                <div style="font-family: var(--font-mono); font-weight: 600; font-size: 0.88rem; color: var(--accent-cyan);" id="targetDocIdVal">--</div>
+              </div>
+              <div>
+                <div style="font-size: 0.72rem; color: var(--text-muted); text-transform: uppercase;">Applicant</div>
+                <div style="font-weight: 600; font-size: 0.88rem; color: var(--text-primary);" id="targetDocApplicantVal">--</div>
+              </div>
+              <div>
+                <div style="font-size: 0.72rem; color: var(--text-muted); text-transform: uppercase;">Category</div>
+                <div style="font-weight: 500; font-size: 0.88rem; color: var(--text-primary);" id="targetDocTypeVal">--</div>
+              </div>
+              <div>
+                <div style="font-size: 0.72rem; color: var(--text-muted); text-transform: uppercase;">Department</div>
+                <div style="font-size: 0.82rem; color: var(--text-secondary);" id="targetDocDeptVal">--</div>
+              </div>
+            </div>
+
+            <div>
+              <div style="font-size: 0.72rem; color: var(--text-muted); text-transform: uppercase; margin-bottom: 2px;">Current Active Hash</div>
+              <div style="font-family: var(--font-mono); font-size: 0.78rem; color: var(--text-secondary); word-break: break-all; background: #FFFFFF; padding: 6px 10px; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle);" id="targetDocHashVal">--</div>
+            </div>
+          </div>
+
+          <!-- Update Reason / Amendment Notes -->
+          <div class="form-group">
+            <label class="form-label" for="updateReason">Revision Notes / Reason for Amendment *</label>
+            <input type="text" id="updateReason" class="form-input" placeholder="e.g. Corrected residential parcel address / Renewed fiscal assessment year" required />
+          </div>
+
+          <!-- Revision Version Tag -->
+          <div class="form-group">
+            <label class="form-label" for="updateRevisionTag">Revision Version Designation</label>
+            <input type="text" id="updateRevisionTag" class="form-input" value="Revision 2.0 (Official Amendment)" readonly style="font-family: var(--font-mono); font-weight: 500;" />
+          </div>
+
+          <!-- Upload Updated File Dropzone -->
+          <div class="form-group">
+            <label class="form-label">Upload Revised Document File *</label>
+            <div class="upload-dropzone" id="updateFileArea" style="padding: 32px 20px; text-align: center;">
+              <input type="file" id="updateFileInput" style="display: none;" accept=".pdf,.png,.jpg,.jpeg" required />
+              <div class="dropzone-icon-box" style="width: 48px; height: 48px; margin: 0 auto 10px auto;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M17 8l-5-5-5 5M12 3v12"/></svg>
+              </div>
+              <div style="font-size: 0.92rem; font-weight: 600; color: var(--text-primary);" id="updateStatusPrompt">
+                Click or drag & drop updated document to re-compute SHA-256
+              </div>
+              <div style="font-size: 0.78rem; color: var(--text-muted); margin-top: 4px;">
+                Supported formats: PDF, PNG, JPG (Generates revised fingerprint)
+              </div>
+            </div>
+
+            <!-- Hash Comparison Grid -->
+            <div id="updateHashDiffBox" style="display: none; margin-top: 14px;">
+              <div class="diff-grid">
+                <div>
+                  <div style="font-size: 0.7rem; color: var(--text-muted); text-transform: uppercase; font-weight: 700; margin-bottom: 2px;">
+                    Previous Document Hash
+                  </div>
+                  <div style="font-family: var(--font-mono); font-size: 0.76rem; color: var(--text-secondary); word-break: break-all;" id="diffPrevHash">--</div>
+                </div>
+                <div>
+                  <div style="font-size: 0.7rem; color: var(--accent-blue); text-transform: uppercase; font-weight: 700; margin-bottom: 2px;">
+                    New Revised Hash (SHA-256)
+                  </div>
+                  <div style="font-family: var(--font-mono); font-size: 0.76rem; color: var(--accent-cyan); word-break: break-all; font-weight: 600;" id="diffNewHash">--</div>
+                </div>
+              </div>
+              <div style="font-size: 0.76rem; color: var(--color-success); font-weight: 600; margin-top: 8px; display: flex; align-items: center; gap: 6px;">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                Unique cryptographic fingerprint computed. Ready to submit amendment to officer review queue.
+              </div>
+            </div>
+          </div>
+
+          <div style="display: flex; justify-content: flex-end; gap: 14px; margin-top: 28px; padding-top: 20px; border-top: 1px solid var(--border-subtle);">
+            <button type="button" class="btn-secondary" id="resetUpdateFormBtn">Reset</button>
+            <button type="submit" class="btn-primary" id="submitUpdateDocBtn">
+              Submit Document Revision & Re-Hash
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Submission / Update Success Modal (Completely Static) -->
+      <div class="modal-overlay" id="submissionReceiptModal" role="dialog" aria-modal="true">
+        <div class="modal-window" style="max-width: 580px;">
+          <div class="modal-header">
+            <div style="display: flex; align-items: center; gap: 10px;">
+              <div style="width: 10px; height: 10px; border-radius: 50%; background: var(--color-warning);"></div>
+              <h3 class="modal-title" id="receiptModalTitle">Submission Confirmed</h3>
+            </div>
+            <button class="modal-close-btn" id="closeReceiptModal" aria-label="Close Modal">&times;</button>
+          </div>
+          <div class="modal-body" style="display: flex; flex-direction: column; gap: 16px;">
+            <div style="background: var(--color-warning-bg); border: 1px solid rgba(245, 158, 11, 0.4); border-radius: var(--radius-md); padding: 16px; display: flex; align-items: center; gap: 14px;">
+              <div style="width: 40px; height: 40px; border-radius: 50%; background: rgba(245, 158, 11, 0.2); display: flex; align-items: center; justify-content: center; color: var(--color-warning); font-size: 1.2rem; flex-shrink: 0; font-weight: bold;">
+                ✓
+              </div>
+              <div>
+                <div style="font-size: 0.95rem; font-weight: 700; color: var(--text-primary);" id="receiptStatusHeading">
+                  Queued for Officer Review & Signing
+                </div>
+                <div style="font-size: 0.82rem; color: var(--text-secondary);" id="receiptStatusSub">
+                  The cryptographic fingerprint has been recorded and submitted to the government officer review console.
+                </div>
+              </div>
+            </div>
+
+            <div style="background: #F8FAFC; border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 16px;">
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 12px;">
+                <div>
+                  <div style="font-size: 0.7rem; color: var(--text-muted); text-transform: uppercase;">Transaction ID</div>
+                  <div style="font-family: var(--font-mono); font-size: 0.82rem; color: var(--accent-violet); font-weight: 600;" id="receiptTxId">0x8F4A...91C2</div>
+                </div>
+                <div>
+                  <div style="font-size: 0.7rem; color: var(--text-muted); text-transform: uppercase;">Document ID</div>
+                  <div style="font-family: var(--font-mono); font-size: 0.82rem; color: var(--text-primary); font-weight: 600;" id="receiptDocId">GOV-DOC-2026-8948</div>
+                </div>
+              </div>
+              <div style="margin-bottom: 12px;">
+                <div style="font-size: 0.7rem; color: var(--text-muted); text-transform: uppercase;">Revision Version</div>
+                <div style="font-family: var(--font-mono); font-size: 0.82rem; color: var(--text-primary); font-weight: 600;" id="receiptRevision">Initial Version 1.0</div>
+              </div>
+              <div>
+                <div style="font-size: 0.7rem; color: var(--text-muted); text-transform: uppercase;">SHA-256 Digest</div>
+                <div style="font-family: var(--font-mono); font-size: 0.78rem; color: var(--accent-cyan); word-break: break-all; line-height: 1.4;" id="receiptHash"></div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button class="btn-secondary" id="receiptDoneBtn">Done</button>
+            <a href="/dashboard.html" class="btn-primary">View in Officer Queue &rarr;</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Persona / Role Modal (Static) -->
+      <div class="modal-overlay" id="roleAuthModal" role="dialog" aria-modal="true">
+        <div class="modal-window">
+          <div class="modal-header">
+            <h3 class="modal-title">Select Security Persona</h3>
+            <button class="modal-close-btn" aria-label="Close Persona Modal">&times;</button>
+          </div>
+          <div class="modal-body">
+            <div class="role-choice-grid">
+              <div class="role-choice-card active" data-role="citizen">
+                <div class="role-choice-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+                <div><div class="role-choice-name">Citizen / Applicant</div><div class="role-choice-desc">Submit new certificates, verify personal deeds.</div></div>
+              </div>
+              <div class="role-choice-card" data-role="officer">
+                <div class="role-choice-icon" style="color: var(--accent-cyan);"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/></svg></div>
+                <div><div class="role-choice-name">Government Officer</div><div class="role-choice-desc">Access approval queue, digitally sign documents.</div></div>
+              </div>
+              <div class="role-choice-card" data-role="admin">
+                <div class="role-choice-icon" style="color: var(--accent-violet);"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-2 2 2 2 0 01-2-2v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H3a2 2 0 01-2-2 2 2 0 012-2h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 010-2.83 2 2 0 012.83 0l.06.06a1.65 1.65 0 001.82.33H9a1.65 1.65 0 001-1.51V3a2 2 0 012-2 2 2 0 012 2v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 0 2 2 0 010 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V9a1.65 1.65 0 001.51 1H21a2 2 0 012 2 2 2 0 01-2 2h-.09a1.65 1.65 0 00-1.51 1z"/></svg></div>
+                <div><div class="role-choice-name">System Administrator</div><div class="role-choice-desc">Consensus telemetry and raw audit exports.</div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div id="toastContainer"></div>
+
+    <!-- Application Logic (Vanilla ES Module) -->
+    <script type="module">
+      import { VeridexUtils } from '/js/utils.js';
+      import { VeridexAuth } from '/js/auth.js';
+
+      document.addEventListener('DOMContentLoaded', () => {
+        // Elements - Tabs & Mode Switching
+        const tabModeNew = document.getElementById('tabModeNew');
+        const tabModeUpdate = document.getElementById('tabModeUpdate');
+        const formNew = document.getElementById('docUploadForm');
+        const formUpdate = document.getElementById('docUpdateForm');
+
+        // Mode 1 Elements
+        const docIdInput = document.getElementById('docId');
+        const regenBtn = document.getElementById('regenDocIdBtn');
+        const fileArea = document.getElementById('uploadFileArea');
+        const fileInput = document.getElementById('formFileInput');
+        const promptEl = document.getElementById('uploadStatusPrompt');
+        const previewBox = document.getElementById('fileHashPreviewBox');
+        const hashDisplay = document.getElementById('calculatedHashPreview');
+
+        let newComputedHash = null;
+        let newSelectedFile = null;
+
+        // Mode 2 Elements (Document Update)
+        const updateSelectDoc = document.getElementById('updateSelectDoc');
+        const quickChipsContainer = document.getElementById('quickDocChipsContainer');
+        const summaryCard = document.getElementById('targetDocSummaryCard');
+        const statusBadge = document.getElementById('targetDocStatusBadge');
+        const targetDocIdVal = document.getElementById('targetDocIdVal');
+        const targetDocApplicantVal = document.getElementById('targetDocApplicantVal');
+        const targetDocTypeVal = document.getElementById('targetDocTypeVal');
+        const targetDocDeptVal = document.getElementById('targetDocDeptVal');
+        const targetDocHashVal = document.getElementById('targetDocHashVal');
+        const updateReasonInput = document.getElementById('updateReason');
+        const updateRevisionTag = document.getElementById('updateRevisionTag');
+
+        const updateFileArea = document.getElementById('updateFileArea');
+        const updateFileInput = document.getElementById('updateFileInput');
+        const updatePromptEl = document.getElementById('updateStatusPrompt');
+        const updateHashDiffBox = document.getElementById('updateHashDiffBox');
+        const diffPrevHash = document.getElementById('diffPrevHash');
+        const diffNewHash = document.getElementById('diffNewHash');
+        const resetUpdateBtn = document.getElementById('resetUpdateFormBtn');
+
+        let updateComputedHash = null;
+        let updateSelectedFile = null;
+        let activeTargetDoc = null;
+
+        // Receipt Modal Elements
+        const receiptModal = document.getElementById('submissionReceiptModal');
+        const receiptModalTitle = document.getElementById('receiptModalTitle');
+        const receiptStatusHeading = document.getElementById('receiptStatusHeading');
+        const receiptStatusSub = document.getElementById('receiptStatusSub');
+        const receiptTxId = document.getElementById('receiptTxId');
+        const receiptDocId = document.getElementById('receiptDocId');
+        const receiptRevision = document.getElementById('receiptRevision');
+        const receiptHash = document.getElementById('receiptHash');
+        const closeReceiptBtn = document.getElementById('closeReceiptModal');
+        const receiptDoneBtn = document.getElementById('receiptDoneBtn');
+
+        // Initialize Doc ID
+        const setDocId = () => {
+          docIdInput.value = VeridexUtils.generateDocId('GOV-DOC');
+        };
+        setDocId();
+        regenBtn.addEventListener('click', setDocId);
+
+        // Populate Existing Documents in Update Selector & Quick Chips
+        const populateUpdateOptions = () => {
+          const docs = VeridexUtils.getDocuments();
+          updateSelectDoc.innerHTML = '<option value="">Choose an existing registered document...</option>';
+          quickChipsContainer.innerHTML = '';
+
+          docs.forEach((doc, idx) => {
+            const opt = document.createElement('option');
+            opt.value = doc.id;
+            opt.textContent = `${doc.id} — ${doc.applicant} (${doc.type}) [${doc.status.toUpperCase()}]`;
+            updateSelectDoc.appendChild(opt);
+
+            // Add first 4 as quick chips
+            if (idx < 5) {
+              const chip = document.createElement('button');
+              chip.type = 'button';
+              chip.className = 'quick-chip';
+              chip.innerHTML = `<span>${doc.id}</span> · <em>${doc.type}</em>`;
+              chip.addEventListener('click', () => {
+                updateSelectDoc.value = doc.id;
+                selectDocumentForUpdate(doc.id);
+              });
+              quickChipsContainer.appendChild(chip);
+            }
+          });
+        };
+        populateUpdateOptions();
+
+        // Switch Tabs Mode
+        const switchMode = (mode) => {
+          if (mode === 'new') {
+            tabModeNew.classList.add('active');
+            tabModeNew.setAttribute('aria-selected', 'true');
+            tabModeUpdate.classList.remove('active');
+            tabModeUpdate.setAttribute('aria-selected', 'false');
+            formNew.style.display = 'block';
+            formUpdate.style.display = 'none';
+          } else {
+            tabModeUpdate.classList.add('active');
+            tabModeUpdate.setAttribute('aria-selected', 'true');
+            tabModeNew.classList.remove('active');
+            tabModeNew.setAttribute('aria-selected', 'false');
+            formNew.style.display = 'none';
+            formUpdate.style.display = 'block';
+            populateUpdateOptions();
+          }
+        };
+
+        tabModeNew.addEventListener('click', () => switchMode('new'));
+        tabModeUpdate.addEventListener('click', () => switchMode('update'));
+
+        // Check URL Query Param e.g. ?mode=update or ?docId=GOV-DOC-2026-8944
+        const urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.get('mode') === 'update' || urlParams.get('docId')) {
+          switchMode('update');
+          const targetId = urlParams.get('docId');
+          if (targetId) {
+            updateSelectDoc.value = targetId;
+            selectDocumentForUpdate(targetId);
+          }
+        }
+
+        // ====================================================================
+        // Mode 1: New Document Logic
+        // ====================================================================
+        fileArea.addEventListener('click', () => fileInput.click());
+
+        fileArea.addEventListener('dragover', (e) => {
+          e.preventDefault();
+          fileArea.classList.add('dragover');
+        });
+
+        fileArea.addEventListener('dragleave', () => {
+          fileArea.classList.remove('dragover');
+        });
+
+        const processNewFile = async (file) => {
+          newSelectedFile = file;
+          promptEl.textContent = `Computing SHA-256 for: ${file.name}...`;
+          const buffer = await file.arrayBuffer();
+          newComputedHash = await VeridexUtils.sha256(buffer);
+          promptEl.innerHTML = `✓ File Attached: <strong style="color: var(--accent-blue);">${file.name}</strong> (${VeridexUtils.formatBytes(file.size)})`;
+          hashDisplay.textContent = newComputedHash;
+          previewBox.style.display = 'block';
+          VeridexUtils.showToast('SHA-256 digest computed via Web Crypto API', 'success');
+        };
+
+        fileArea.addEventListener('drop', (e) => {
+          e.preventDefault();
+          fileArea.classList.remove('dragover');
+          if (e.dataTransfer.files && e.dataTransfer.files.length > 0) {
+            processNewFile(e.dataTransfer.files[0]);
+          }
+        });
+
+        fileInput.addEventListener('change', (e) => {
+          if (e.target.files && e.target.files.length > 0) {
+            processNewFile(e.target.files[0]);
+          }
+        });
+
+        formNew.addEventListener('submit', (e) => {
+          e.preventDefault();
+          if (!newComputedHash || !newSelectedFile) {
+            VeridexUtils.showToast('Please attach a document file to compute its cryptographic hash.', 'error');
+            return;
+          }
+
+          const docType = document.getElementById('docType').value;
+          const applicant = document.getElementById('applicantName').value;
+          const docId = docIdInput.value;
+          const department = document.getElementById('department').value;
+          const mockTx = VeridexUtils.generateTxId();
+          const now = new Date();
+          const submittedDate = now.toISOString().replace('T', ' ').substring(0, 19);
+
+          const newDoc = {
+            id: docId,
+            applicant: applicant,
+            type: docType,
+            department: department,
+            submittedDate: submittedDate,
+            status: 'pending',
+            hash: newComputedHash,
+            txId: mockTx,
+            blockHeight: null,
+            officer: null,
+            signature: null,
+            zkProofId: null,
+            revisionCount: 1,
+            fileName: newSelectedFile.name,
+            fileSize: VeridexUtils.formatBytes(newSelectedFile.size)
+          };
+
+          const docs = VeridexUtils.getDocuments();
+          docs.unshift(newDoc);
+          VeridexUtils.saveDocuments(docs);
+
+          VeridexUtils.updateStats(stats => {
+            stats.pending = (stats.pending || 0) + 1;
+            stats.totalDocuments = (stats.totalDocuments || 0) + 1;
+          });
+
+          VeridexUtils.addAuditLog({
+            title: 'Document Submitted',
+            desc: `Citizen ${applicant} submitted ${docType} (${newSelectedFile.name}) for departmental review.`,
+            docId: docId,
+            category: 'submission',
+            icon: 'upload'
+          });
+
+          // Show Receipt Modal
+          receiptModalTitle.textContent = 'Submission Received';
+          receiptStatusHeading.textContent = 'Pending Officer Approval';
+          receiptStatusSub.textContent = 'Your document has been fingerprinted and queued for official departmental review and signing.';
+          receiptTxId.textContent = mockTx;
+          receiptDocId.textContent = docId;
+          receiptRevision.textContent = 'Initial Version 1.0';
+          receiptHash.textContent = newComputedHash;
+          receiptModal.classList.add('open');
+
+          const resetNewForm = () => {
+            receiptModal.classList.remove('open');
+            formNew.reset();
+            setDocId();
+            previewBox.style.display = 'none';
+            promptEl.textContent = 'Click or drag & drop file to compute in-browser SHA-256';
+            newComputedHash = null;
+            newSelectedFile = null;
+            populateUpdateOptions();
+          };
+
+          closeReceiptBtn.onclick = resetNewForm;
+          receiptDoneBtn.onclick = resetNewForm;
+        });
+
+        // ====================================================================
+        // Mode 2: Update Existing Document Logic
+        // ====================================================================
+        const selectDocumentForUpdate = (docId) => {
+          if (!docId) {
+            summaryCard.style.display = 'none';
+            activeTargetDoc = null;
+            return;
+          }
+
+          const docs = VeridexUtils.getDocuments();
+          const target = docs.find(d => d.id === docId);
+
+          if (!target) {
+            VeridexUtils.showToast('Document record not found in ledger database.', 'error');
+            summaryCard.style.display = 'none';
+            activeTargetDoc = null;
+            return;
+          }
+
+          activeTargetDoc = target;
+          targetDocIdVal.textContent = target.id;
+          targetDocApplicantVal.textContent = target.applicant;
+          targetDocTypeVal.textContent = target.type;
+          targetDocDeptVal.textContent = target.department;
+          targetDocHashVal.textContent = target.hash;
+
+          statusBadge.textContent = target.status.toUpperCase();
+          statusBadge.className = `status-badge ${target.status}`;
+
+          const nextRev = (target.revisionCount || 1) + 1;
+          updateRevisionTag.value = `Revision ${nextRev}.0 (Official Amendment)`;
+
+          summaryCard.style.display = 'block';
+
+          // Reset previous update file state
+          updateSelectedFile = null;
+          updateComputedHash = null;
+          updateHashDiffBox.style.display = 'none';
+          updatePromptEl.textContent = 'Click or drag & drop updated document to re-compute SHA-256';
+        };
+
+        updateSelectDoc.addEventListener('change', (e) => {
+          selectDocumentForUpdate(e.target.value);
+        });
+
+        updateFileArea.addEventListener('click', () => updateFileInput.click());
+
+        updateFileArea.addEventListener('dragover', (e) => {
+          e.preventDefault();
+          updateFileArea.classList.add('dragover');
+        });
+
+        updateFileArea.addEventListener('dragleave', () => {
+          updateFileArea.classList.remove('dragover');
+        });
+
+        const processUpdateFile = async (file) => {
+          if (!activeTargetDoc) {
+            VeridexUtils.showToast('Please select a target document first.', 'error');
+            return;
+          }
+
+          updateSelectedFile = file;
+          updatePromptEl.textContent = `Re-calculating SHA-256 for updated file: ${file.name}...`;
+          const buffer = await file.arrayBuffer();
+          updateComputedHash = await VeridexUtils.sha256(buffer);
+
+          updatePromptEl.innerHTML = `✓ Revised File Loaded: <strong style="color: var(--accent-blue);">${file.name}</strong> (${VeridexUtils.formatBytes(file.size)})`;
+          diffPrevHash.textContent = activeTargetDoc.hash;
+          diffNewHash.textContent = updateComputedHash;
+          updateHashDiffBox.style.display = 'block';
+
+          VeridexUtils.showToast('New SHA-256 revision hash computed successfully', 'success');
+        };
+
+        updateFileArea.addEventListener('drop', (e) => {
+          e.preventDefault();
+          updateFileArea.classList.remove('dragover');
+          if (e.dataTransfer.files && e.dataTransfer.files.length > 0) {
+            processUpdateFile(e.dataTransfer.files[0]);
+          }
+        });
+
+        updateFileInput.addEventListener('change', (e) => {
+          if (e.target.files && e.target.files.length > 0) {
+            processUpdateFile(e.target.files[0]);
+          }
+        });
+
+        resetUpdateBtn.addEventListener('click', () => {
+          formUpdate.reset();
+          summaryCard.style.display = 'none';
+          updateHashDiffBox.style.display = 'none';
+          updatePromptEl.textContent = 'Click or drag & drop updated document to re-compute SHA-256';
+          activeTargetDoc = null;
+          updateComputedHash = null;
+          updateSelectedFile = null;
+        });
+
+        formUpdate.addEventListener('submit', (e) => {
+          e.preventDefault();
+          if (!activeTargetDoc) {
+            VeridexUtils.showToast('Please select a registered document to update.', 'error');
+            return;
+          }
+          if (!updateComputedHash || !updateSelectedFile) {
+            VeridexUtils.showToast('Please attach the revised file to calculate its updated SHA-256.', 'error');
+            return;
+          }
+
+          const reason = updateReasonInput.value.trim();
+          if (!reason) {
+            VeridexUtils.showToast('Please provide a reason or notes for this amendment.', 'error');
+            return;
+          }
+
+          const docs = VeridexUtils.getDocuments();
+          const targetIndex = docs.findIndex(d => d.id === activeTargetDoc.id);
+
+          if (targetIndex === -1) {
+            VeridexUtils.showToast('Target document no longer exists in local database.', 'error');
+            return;
+          }
+
+          const oldHash = docs[targetIndex].hash;
+          const currentRev = (docs[targetIndex].revisionCount || 1);
+          const nextRev = currentRev + 1;
+          const newTx = VeridexUtils.generateTxId();
+          const now = new Date();
+          const updatedDateStr = now.toISOString().replace('T', ' ').substring(0, 19);
+
+          // Update record
+          docs[targetIndex] = {
+            ...docs[targetIndex],
+            previousHash: oldHash,
+            hash: updateComputedHash,
+            status: 'pending', // Re-enters officer review queue
+            revisionCount: nextRev,
+            lastUpdated: updatedDateStr,
+            updateReason: reason,
+            fileName: updateSelectedFile.name,
+            fileSize: VeridexUtils.formatBytes(updateSelectedFile.size),
+            txId: newTx,
+            signature: null,
+            officer: null,
+            blockHeight: null
+          };
+
+          VeridexUtils.saveDocuments(docs);
+
+          // Update Stats
+          VeridexUtils.updateStats(stats => {
+            stats.pending = (stats.pending || 0) + 1;
+          });
+
+          // Add Audit Log
+          VeridexUtils.addAuditLog({
+            title: `Document Revision #${nextRev} Submitted`,
+            desc: `Citizen ${activeTargetDoc.applicant} submitted Revision ${nextRev}.0 for ${activeTargetDoc.id}. Reason: "${reason}". New Hash: ${updateComputedHash.substring(0, 12)}...`,
+            docId: activeTargetDoc.id,
+            category: 'submission',
+            icon: 'refresh-cw'
+          });
+
+          // Show Receipt Modal
+          receiptModalTitle.textContent = 'Document Revision Received';
+          receiptStatusHeading.textContent = `Revision ${nextRev}.0 Queued for Review`;
+          receiptStatusSub.textContent = `The updated document file was fingerprinted. Old hash (${oldHash.substring(0, 8)}...) superseded by new hash.`;
+          receiptTxId.textContent = newTx;
+          receiptDocId.textContent = activeTargetDoc.id;
+          receiptRevision.textContent = `Revision ${nextRev}.0 (Official Amendment)`;
+          receiptHash.textContent = updateComputedHash;
+          receiptModal.classList.add('open');
+
+          const closeUpdateReceipt = () => {
+            receiptModal.classList.remove('open');
+            formUpdate.reset();
+            summaryCard.style.display = 'none';
+            updateHashDiffBox.style.display = 'none';
+            updatePromptEl.textContent = 'Click or drag & drop updated document to re-compute SHA-256';
+            activeTargetDoc = null;
+            updateComputedHash = null;
+            updateSelectedFile = null;
+            populateUpdateOptions();
+          };
+
+          closeReceiptBtn.onclick = closeUpdateReceipt;
+          receiptDoneBtn.onclick = closeUpdateReceipt;
+        });
+      });
+    </script>
+
+    <!-- iPhone Home Screen Bottom Dock Navigation System -->
+    <nav class="iphone-dock-wrapper" aria-label="iPhone Home Screen Bottom Navigation">
+      <div class="iphone-dock" role="navigation">
+        <a href="/index.html" class="iphone-dock-item" aria-label="Home">
+          <div class="iphone-app-icon iphone-icon-home">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </div>
+          <span class="iphone-app-label">Home</span>
+        </a>
+
+        <a href="/verify.html" class="iphone-dock-item featured" aria-label="Verify Document">
+          <div class="iphone-app-icon iphone-icon-verify">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </div>
+          <span class="iphone-app-label" style="font-weight: 700; color: var(--accent-blue);">Verify</span>
+        </a>
+
+        <a href="/upload.html" class="iphone-dock-item active" aria-label="Submit or Update Document">
+          <div class="iphone-app-icon iphone-icon-upload">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><line x1="9" y1="15" x2="15" y2="15"/></svg>
+          </div>
+          <span class="iphone-app-label">Submit/Edit</span>
+        </a>
+
+        <a href="/dashboard.html" class="iphone-dock-item" aria-label="Officer Dashboard">
+          <div class="iphone-app-icon iphone-icon-dashboard">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+          </div>
+          <span class="iphone-app-label">Console</span>
+        </a>
+
+        <a href="/blockchain.html" class="iphone-dock-item" aria-label="Blockchain Explorer">
+          <div class="iphone-app-icon iphone-icon-ledger">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+          </div>
+          <span class="iphone-app-label">Ledger</span>
+        </a>
+
+        <a href="/audit.html" class="iphone-dock-item" aria-label="Audit Trail">
+          <div class="iphone-app-icon iphone-icon-security">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          </div>
+          <span class="iphone-app-label">Audit</span>
+        </a>
+      </div>
+      <div class="iphone-home-indicator" aria-hidden="true"></div>
+    </nav>
+  </body>
+</html>

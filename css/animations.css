@@ -1,0 +1,200 @@
+/* ==========================================================================
+   VERIDEX — Animations & Motion System (CSS3 Pure)
+   ========================================================================== */
+
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(0, 242, 254, 0.25), inset 0 0 15px rgba(0, 242, 254, 0.1);
+    border-color: rgba(0, 242, 254, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(0, 242, 254, 0.5), inset 0 0 25px rgba(0, 242, 254, 0.25);
+    border-color: rgba(0, 242, 254, 0.85);
+  }
+}
+
+@keyframes pulseViolet {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(139, 92, 246, 0.25);
+    border-color: rgba(139, 92, 246, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 28px rgba(139, 92, 246, 0.55);
+    border-color: rgba(139, 92, 246, 0.85);
+  }
+}
+
+@keyframes pulseStatusGreen {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.6);
+  }
+  50% {
+    opacity: 0.85;
+    transform: scale(1.08);
+    box-shadow: 0 0 0 6px rgba(16, 185, 129, 0);
+  }
+}
+
+@keyframes pulseDanger {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(239, 68, 68, 0.4), inset 0 0 15px rgba(239, 68, 68, 0.2);
+    border-color: rgba(239, 68, 68, 0.6);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(239, 68, 68, 0.8), inset 0 0 30px rgba(239, 68, 68, 0.4);
+    border-color: rgba(239, 68, 68, 1);
+  }
+}
+
+@keyframes flowBeam {
+  0% {
+    stroke-dashoffset: 200;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes scanline {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(1000%);
+  }
+}
+
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes rotateSlow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes modalBackdropFade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes modalContentSlide {
+  from {
+    opacity: 0;
+    transform: scale(0.95) translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes toastSlideIn {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes rippleWave {
+  0% {
+    transform: scale(0.8);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(2.2);
+    opacity: 0;
+  }
+}
+
+/* Ambient Fluid Waves & Aurora Animation (Wallpaper Design) */
+@keyframes ambientDrift {
+  0% {
+    transform: scale(1) translate(0, 0);
+  }
+  50% {
+    transform: scale(1.04) translate(-1.5%, 1.2%);
+  }
+  100% {
+    transform: scale(1) translate(0, 0);
+  }
+}
+
+@keyframes auroraBreathe {
+  0%, 100% {
+    opacity: 0.55;
+    filter: blur(60px) hue-rotate(0deg);
+  }
+  50% {
+    opacity: 0.85;
+    filter: blur(75px) hue-rotate(15deg);
+  }
+}
+
+.ambient-wallpaper-bg {
+  animation: ambientDrift 28s ease-in-out infinite;
+  will-change: transform;
+}
+
+.aurora-layer {
+  animation: auroraBreathe 12s ease-in-out infinite;
+  will-change: opacity, filter;
+}
+
+/* Pipeline Flow Animation */
+.flow-line-active {
+  stroke-dasharray: 8 6;
+  animation: flowBeam 1.6s linear infinite;
+}
+
+.pulse-node {
+  animation: pulseGlow 2.5s ease-in-out infinite;
+}
+
+.pulse-dot-green {
+  animation: pulseStatusGreen 2s ease-in-out infinite;
+}
+
+.float-element {
+  animation: floatSlow 5s ease-in-out infinite;
+}
+
+.danger-tamper-pulse {
+  animation: pulseDanger 1.2s ease-in-out infinite !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
